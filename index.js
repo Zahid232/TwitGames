@@ -67,8 +67,8 @@ if (navigator.share) {
         // Create the data to be shared
         const shareData = {
           title: 'Example Title',
-          text: 'Example Text',
-          url: 'https://example.com',
+          text: 'Yayy!! I got a job throughthis website',
+          url: 'https://visionary-chebakia-c1f2a5.netlify.app/',
         };
   
         // Call the Web Share API to share the data
