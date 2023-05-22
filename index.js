@@ -33,6 +33,7 @@ function rewrite(){
     const x=document.getElementById("name").value;
     const y=document.getElementById("district").value;
     const z=document.getElementById("age").value;
+    const xookMe=Math.floor(Math.random() *10);
     
     const urduPoetries = [
         "میں تو اک دھوپ کی طرح پھولوں کے ساتھ چلا",
@@ -46,14 +47,12 @@ function rewrite(){
         "کچھ اور نہیں",
         "دل کی باتیں"
       ];
-
-    const xookMe=Math.floor(Math.random() *10)
-
-    document.getElementById("result").innerHTML = urduPoetries[xookMe];
-}
-
-
-
+    
+      const result=urduPoetries[xookMe];
+      document.getElementById("result").innerHTML = result;
+  
+  }
+    
 
 const shareButton = document.getElementById('share-button');
 
@@ -62,7 +61,7 @@ shareButton.addEventListener('click', event =>{
     navigator.share({
       title: "Find Your Shaar",
       text: 'Yayy!! I found my Shaar. You can too at this link!',
-      text: urduPoetries[xookMe],
+      text: result,
       url:"https://visionary-chebakia-c1f2a5.netlify.app/",
     }).then(() => {
       console.log("Thanks");
