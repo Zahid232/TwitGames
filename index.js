@@ -56,9 +56,24 @@ function rewrite(){
 
 // Sharing Button
 
+function downloadimage() {
+  /*var container = document.getElementById("image-wrap");*/ /*specific element on page*/
+  var container = document.getElementById("htmltoimage");; /* full page */
+  html2canvas(container, { allowTaint: true }).then(function (canvas) {
+
+      var link = document.createElement("a");
+      document.body.appendChild(link);
+      link.download = "html_image.jpg";
+      link.href = canvas.toDataURL();
+      link.target = '_blank';
+      link.click();
+  });
+}
+
 const shareButton = document.getElementById('share-button');
 
 shareButton.addEventListener('click', event =>{
+  downloadimage()
   if (navigator.share){
     navigator.share({
       title: "Try This",
