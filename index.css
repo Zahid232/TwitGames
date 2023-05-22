@@ -1,0 +1,130 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-color: rgb(101, 128, 179);
+}
+
+#divi{
+    padding: 40px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+    box-shadow: 2px 2px 20px;
+    border-radius: 8px;
+    background-color: rgb(110, 169, 171);
+    margin-top: 100px;
+    width: 320px;
+    margin-left: 40px;
+}
+
+
+div h4{
+    color: rgb(38, 90, 90);
+    letter-spacing: 1px;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+
+input{
+    width: 70%;
+    padding: 6px 8px;
+    margin-bottom: 24px;
+    border: 1px solid rgb(38, 90, 90);
+    border-radius: 4px;
+    background-color: rgb(226, 226, 222);
+    font-size: 12px;
+}
+
+.form-button{
+    padding: 8px 18px;
+    background-color: darkcyan;
+    border: none;
+    color: whitesmoke;
+    font-size: 16px;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    width: 70%;
+    cursor: pointer;
+}
+
+button:hover{
+    transform: scale(.9);
+}
+
+#output{
+    display: none;
+    padding: 40px;
+    border: 1px solid rgb(96, 177, 201);
+    flex-direction: column;
+    width: 70%;
+    max-width: 500px;
+    align-items: center;
+    margin-top: 10%;
+    margin-left: 5%;
+    height: 400px;
+    box-shadow: 2px 2px 20px rgb(41, 62, 69);
+    border-radius: 36px;
+    background-color: rgb(140, 200, 202);
+}
+
+#output p{
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: rgb(67, 65, 65);
+    background-color: rgb(115, 146, 173);
+    padding: 10px 20px;
+    color: whitesmoke;
+}
+
+
+.try{
+    background-color: darkcyan;
+    border-radius: 6px;
+    padding: 4px 8px;
+    width:40%;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 80px;
+    text-align: center;
+}
+
+
+.nav{
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav a{
+    color: whitesmoke;
+    font-size: 36px;
+    text-decoration: none;
+}
+
+span{
+    color: rgb(110, 169, 171);
+}
+
+
+#share-button{
+    background-color: aqua;
+    text-decoration: none;
+    border: none;
+    padding: 4px 36px;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-top: 30px;
+}
