@@ -77,8 +77,8 @@ shareButton.addEventListener('click', event =>{
   if (navigator.share){
     navigator.share({
       title: "Try This",
-      text: 'Yayy!! I got a job through this website. you can',
-      url: 'https://visionary-chebakia-c1f2a5.netlify.app',
+      text: 'Yayy!! I got a job through this website. So you can',
+      url:"html_img.jpg",
     }).then(() => {
       console.log("Thanks");
     })
