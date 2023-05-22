@@ -56,28 +56,19 @@ function rewrite(){
 
 // Sharing Button
 
+const shareButton = document.getElementById('share-button');
 
-// Check if the Web Share API is supported by the browser
-if (navigator.share) {
-    const shareButton = document.getElementById('share-button');
-    
-    // Add click event listener to the share button
-    shareButton.addEventListener('click', async () => {
-      try {
-        // Create the data to be shared
-        const shareData = {
-          title: 'Example Title',
-          text: 'Yayy!! I got a job throughthis website',
-          url: 'https://visionary-chebakia-c1f2a5.netlify.app/',
-        };
-  
-        // Call the Web Share API to share the data
-        await navigator.share(shareData);
-      } catch (error) {
-        console.error('Error sharing:', error);
-      }
-    });
-  } else {
-    // Web Share API not supported
-    console.log('Web Share API not supported.');
+shareButton.addEventListener('click', event =>{
+  if (navigator.share){
+    navigator.share({
+      title: "Try This",
+      text: 'Yayy!! I got a job throughthis website',
+      url: 'https://visionary-chebakia-c1f2a5.netlify.app/',
+    }).then(() => {
+      console.log("Thanks");
+    })
+    .catch(console.error);
+  } else{
+    console.log("Not working")
   }
+});
