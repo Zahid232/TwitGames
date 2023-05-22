@@ -98,13 +98,13 @@ html2canvas(document.getElementById('htmltoimage')).then(function(canvas){
         text: "Check Out This Cool",
         url: imageData,
       }).then(() => {
-        alert ("Shared");
+        console.log("Shared");
       })
       .catch((error) =>{
-        alert.error("Error")
+        console.error("Error")
       });
     } else{
-      alert("Web not supported")
+      console.log("Web not supported")
     }
   })
 })
