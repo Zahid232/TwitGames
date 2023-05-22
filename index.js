@@ -24,7 +24,7 @@ formButton.addEventListener("click", () => {
 
 function clicked(){
     document.getElementById("divi").style.display = "none";
-    document.getElementById("output").style.display = "flex";
+    document.getElementById("htmltoimage").style.display = "flex";
     rewrite()
 }
 
