@@ -50,29 +50,61 @@ function rewrite(){
     
       const result=urduPoetries[xookMe];
       document.getElementById("result").innerHTML = result;
-      lyathMe()
   
   }
     
 
-function lyathMe(){
-  const shareButton = document.getElementById('share-button');
+// function lyathMe(){
+//   const shareButton = document.getElementById('share-button');
 
-shareButton.addEventListener('click', event =>{
+// shareButton.addEventListener('click', event =>{
 
-  const shareOut= 'Yayy!! I found my Shaar.You can too at this link' + result;
-  if (navigator.share){
-    navigator.share({
-      title: "Find Your Shaar",
-      text: shareOut,
-      url:"https://visionary-chebakia-c1f2a5.netlify.app/",
-    }).then(() => {
-      console.log("Thanks");
-    })
-    .catch(console.error);
-  } else{
-    console.log("Not working")
-  }
-});
+//   const shareOut= 'Yayy!! I found my Shaar.You can too at this link' + result;
+//   if (navigator.share){
+//     navigator.share({
+//       title: "Find Your Shaar",
+//       text: shareOut,
+//       url:"https://visionary-chebakia-c1f2a5.netlify.app/",
+//     }).then(() => {
+//       console.log("Thanks");
+//     })
+//     .catch(console.error);
+//   } else{
+//     console.log("Not working")
+//   }
+// });
 
-}
+// }
+
+// 
+
+var divContent = document.getElementById("htmltoimage").innerHTML;
+
+var canvas = document.createElement("canvas");
+
+canvas.width = 320;
+canvas.height = 200;
+
+var context = canvas.getContext("2d");
+
+html2canvas(document.getElementById('htmltoimage')).then(function(canvas){
+  var imageData = canvas.toDataURL();
+
+  var button = document.getElementById("share-button");
+  button.addEventListener('click', function(){
+    if (navigator.share){
+      navigator.share({
+        title: "Panun SHaar",
+        text: "Check Out This Cool",
+        url: imageData,
+      }).then(() => {
+        alert ("Shared");
+      })
+      .catch((error) =>{
+        alert.error("Error")
+      });
+    } else{
+      alert("Web not supported")
+    }
+  })
+})
