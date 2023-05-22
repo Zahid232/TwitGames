@@ -50,12 +50,13 @@ function rewrite(){
     
       const result=urduPoetries[xookMe];
       document.getElementById("result").innerHTML = result;
-      
+      lyathMe()
   
   }
     
 
-const shareButton = document.getElementById('share-button');
+function lyathMe(){
+  const shareButton = document.getElementById('share-button');
 
 shareButton.addEventListener('click', event =>{
 
@@ -73,3 +74,5 @@ shareButton.addEventListener('click', event =>{
     console.log("Not working")
   }
 });
+
+}
