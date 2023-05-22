@@ -50,6 +50,7 @@ function rewrite(){
     
       const result=urduPoetries[xookMe];
       document.getElementById("result").innerHTML = result;
+      
   
   }
     
@@ -57,10 +58,12 @@ function rewrite(){
 const shareButton = document.getElementById('share-button');
 
 shareButton.addEventListener('click', event =>{
+
+  const shareOut= 'Yayy!! I found my Shaar.You can too at this link' + result;
   if (navigator.share){
     navigator.share({
       title: "Find Your Shaar",
-      text: 'Yayy!! I found my Shaar. ${result} You can too at this link!',
+      text: shareOut,
       url:"https://visionary-chebakia-c1f2a5.netlify.app/",
     }).then(() => {
       console.log("Thanks");
