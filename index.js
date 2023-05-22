@@ -62,7 +62,7 @@ shareButton.addEventListener('click', event =>{
     navigator.share({
       title: "Find Your Shaar",
       text: 'Yayy!! I found my Shaar. You can too at this link!',
-      url:"https://codepen.io/ayoisaiah/pen/YbNazJ",
+      url:"https://visionary-chebakia-c1f2a5.netlify.app/",
     }).then(() => {
       console.log("Thanks");
     })
