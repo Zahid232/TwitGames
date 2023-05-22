@@ -58,13 +58,11 @@ function rewrite(){
 function lyathMe(){
   const shareButton = document.getElementById('share-button');
 
-shareButton.addEventListener('click', event =>{
-
-  const shareOut= 'Yayy!! I found my Shaar.You can too at this link' + $result;
+  shareButton.addEventListener('click', event =>{
   if (navigator.share){
     navigator.share({
       title: "Find Your Shaar",
-      text: shareOut,
+      text: "klklklkl",
       url:"https://visionary-chebakia-c1f2a5.netlify.app/",
     }).then(() => {
       console.log("Thanks");
@@ -73,7 +71,7 @@ shareButton.addEventListener('click', event =>{
   } else{
     console.log("Not working")
   }
-});
+})
 
 }
 
