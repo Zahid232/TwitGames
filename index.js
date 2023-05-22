@@ -60,9 +60,9 @@ const shareButton = document.getElementById('share-button');
 shareButton.addEventListener('click', event =>{
   if (navigator.share){
     navigator.share({
-      title: "Try This",
-      text: 'Yayy!! I got a job through this website. So you can',
-      url:"html_img.jpg",
+      title: "Find Your Shaar",
+      text: 'Yayy!! I found my Shaar. You can too at this link!',
+      url:"https://codepen.io/ayoisaiah/pen/YbNazJ",
     }).then(() => {
       console.log("Thanks");
     })
