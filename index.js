@@ -57,14 +57,10 @@ function rewrite(){
 
 function lyathMe(){
   const shareButton = document.getElementById('share-button');
-
+  var text="You friendship score is: " + result;
   shareButton.addEventListener('click', event =>{
   if (navigator.share){
-    navigator.share({
-      title: "Find Your Shaar",
-      text: "klklklkl",
-      url:"https://visionary-chebakia-c1f2a5.netlify.app/",
-    }).then(() => {
+    navigator.share({ text: text}).then(() => {
       console.log("Thanks");
     })
     .catch(console.error);
