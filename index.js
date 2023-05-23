@@ -1,59 +1,38 @@
-const formInput = document.querySelector(".form-input");
-const formButton = document.querySelector(".form-button");
 
-// the default state is 'disabled'
-formButton.disabled = true; 
+var sCore=''
+var field1Value=''
+var field2Value=''
 
-// alternative is to use "change" - explained below
-formInput.addEventListener("keyup", buttonState);
 
-function buttonState() {
-    if ( document.querySelector(".form-input").value == "") {
-        formButton.disabled = true; // return disabled as true whenever the input field is empty
-    } 
-     else {
-        formButton.disabled = false; // enable the button once the input field has content
+
+function validateForm(event){
+  
+  event.preventDefault();
+      field1Value = document.getElementById("field1").value;
+      field2Value = document.getElementById("field2").value;
+      var errorMessage = document.getElementById("errorMessage");
+      var inPut =document.getElementById("divi")
+      var ouPut =document.getElementById("outp")
+
+      if (field1Value === "" || field2Value === "") {
+        errorMessage.innerHTML = "Please fill in both fields.";
+        return false;
+      }
+
+      inPut.style.display = "none";
+      ouPut.style.display = "flex";
+      sCore = field1Value.length * field2Value.length
+      rewrite()
     }
-}
-
-formButton.addEventListener("click", () => {
-    clicked()
-});
-
-
-
-function clicked(){
-    document.getElementById("divi").style.display = "none";
-    document.getElementById("htmltoimage").style.display = "flex";
-    rewrite()
-}
 
 
 function rewrite(){
-    const x=document.getElementById("name").value;
-    const y=document.getElementById("district").value;
-    const z=document.getElementById("age").value;
-    const xookMe=Math.floor(Math.random() *10);
+    var friendshipScore = "Yayy!! Your friendship score with " + field2Value+ " is " + sCore;
+      
+    document.getElementById("result").innerHTML = friendshipScore;
     
-    const urduPoetries = [
-        "میں تو اک دھوپ کی طرح پھولوں کے ساتھ چلا",
-        "رنج کا سفر ہمیشہ منظر بدلتا ہے",
-        "تمہاری یادوں کے مستور چھانوں میں رہتا ہوں",
-        "محبت کا کوئی رنگ نہیں",
-        "جواب بھی تو کچھ دیا کرو",
-        "زندگی تیری آواز ہو",
-        "جانیں کیسی ہو تم",
-        "یادوں کے کچھ لف ہیں",
-        "کچھ اور نہیں",
-        "دل کی باتیں"
-      ];
-    
-      const result=urduPoetries[xookMe];
-      document.getElementById("result").innerHTML = result;
-      var friendshipScore = "Your friendship score is" + result ;
       const shareButton = document.getElementById('share-button');
       shareButton.addEventListener('click', event =>{
-        alert(friendshipScore)
       if (navigator.share){
         navigator.share({ 
           title: "Twitter Friendship Score",

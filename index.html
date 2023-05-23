@@ -2,7 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="index.css">
-        <title>Find Your Shaar</title>
+        <title>Twitter Friendship Score</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
@@ -11,16 +11,23 @@
             <a href="#">Sign Up</a>
         </div>
         <div id="divi"> 
-            <h4>Tell Us About Yourself</h4>
-            <input id="name" class="form-input" type="text" placeholder="Enter Your Name">
-            <input id="district" class="form-input" type="text" placeholder="Enter Your District">
-            <input id="age" class="form-input" type="number" placeholder="Enter Your Age">
-            <button class="form-button">Submit</button>
+            <h4>Find Your Twitter Friendship Score</h4>
+            <form id="myForm" onsubmit="return validateForm(event)">
+                <label for="field1"></label>
+                <input type="text" id="field1" required>
+            
+                <label for="field2"></label>
+                <input type="text" id="field2" required>
+            
+                <div class="error-message" id="errorMessage"></div>
+            
+                <button type="submit" id="lyath">Find</button>
+              </form>
         </div>
-        <div class="output" id="htmltoimage">
+        <div class="output" id="outp">
             <h4>Chaeni Kaarnam</h4>
             <p id="result"></p>
-            <button id="share-button">Share</button>
+            <button href="#twitter" id="share-button">Share Your Score</button>
             <a class="try" href="index.html">Try Again</a>
         </div>
         <script src="index.js"></script>

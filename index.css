@@ -16,16 +16,19 @@ body{
     border: 1px solid black;
     display: flex;
     flex-direction: column;
-    align-items: center;
     height: 400px;
     box-shadow: 2px 2px 20px;
     border-radius: 8px;
     background-color: rgb(110, 169, 171);
     margin-top: 100px;
     width: 320px;
-    margin-left: 40px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+form{
+    text-align: center;
+}
 
 div h4{
     color: rgb(38, 90, 90);
@@ -35,7 +38,7 @@ div h4{
 }
 
 
-input{
+#field1, #field2{
     width: 70%;
     padding: 6px 8px;
     margin-bottom: 24px;
@@ -45,7 +48,7 @@ input{
     font-size: 12px;
 }
 
-.form-button{
+#lyath{
     padding: 8px 18px;
     background-color: darkcyan;
     border: none;
@@ -127,4 +130,9 @@ span{
     border-radius: 8px;
     font-size: 14px;
     margin-top: 30px;
+}
+
+
+.error-message{
+    font-size: 4px;
 }
