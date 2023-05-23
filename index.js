@@ -50,25 +50,26 @@ function rewrite(){
     
       const result=urduPoetries[xookMe];
       document.getElementById("result").innerHTML = result;
-      lyathMe()
-  
-  }
-    
-var textT="You friendship 78 score is: " + result;
-function lyathMe(){
-  const shareButton = document.getElementById('share-button');
-  shareButton.addEventListener('click', event =>{
-  if (navigator.share){
-    navigator.share({ text: textT}).then(() => {
-      console.log("Thanks");
+      var friendshipScore = "Your friendship score is" + result ;
+      const shareButton = document.getElementById('share-button');
+      shareButton.addEventListener('click', event =>{
+        alert(friendshipScore)
+      if (navigator.share){
+        navigator.share({ 
+          title: "Twitter Friendship Score",
+          url: "https://visionary-chebakia-c1f2a5.netlify.app/",
+          text: friendshipScore}).then(() => {
+          console.log("Thanks");
+        })
+        .catch(console.error);
+      } else{
+        console.log("Not working")
+      }
     })
-    .catch(console.error);
-  } else{
-    console.log("Not working")
   }
-})
+  
+  
 
-}
 
 
 
