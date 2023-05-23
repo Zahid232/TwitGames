@@ -54,13 +54,12 @@ function rewrite(){
   
   }
     
-
+var textT="You friendship 78 score is: " + result;
 function lyathMe(){
   const shareButton = document.getElementById('share-button');
-  var text="You friendship score is: " + result;
   shareButton.addEventListener('click', event =>{
   if (navigator.share){
-    navigator.share({ text: text}).then(() => {
+    navigator.share({ text: textT}).then(() => {
       console.log("Thanks");
     })
     .catch(console.error);
