@@ -22,6 +22,13 @@ function validateForm(event){
       inPut.style.display = "none";
       ouPut.style.display = "flex";
       sCore = field1Value.length * field2Value.length
+      if (sCore > 100){
+        sCore=100
+      } else if (sCore <20) {
+        sCore=30
+      } else {
+        
+      }
       rewrite()
     }
 
