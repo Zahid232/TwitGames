@@ -4,32 +4,38 @@
         <link rel="stylesheet" href="index.css">
         <title>Twitter Friendship Score</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700&family=Palanquin:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="nav">
-            <a href="#">Paan<span>Zaan</span></a>
-            <a href="#">Sign Up</a>
-        </div>
-        <div id="divi"> 
-            <h4>Find Your Twitter Friendship Score</h4>
-            <form id="myForm" onsubmit="return validateForm(event)">
-                <label for="field1"></label>
-                <input type="text" id="field1" placeholder="Your Username" required>
-            
-                <label for="field2"></label>
-                <input type="text" placeholder="Your Frriend's Username" id="field2" required>
-            
-                <div class="error-message" id="errorMessage"></div>
-            
-                <button type="submit" id="lyath">Find</button>
-              </form>
-        </div>
-        <div class="output" id="outp">
-            <h4>Chaeni Kaarnam</h4>
-            <p id="result"></p>
-            <button href="#twitter" id="share-button">Share Your Score</button>
-            <a class="try" href="index.html">Try Again</a>
-        </div>
+        <header>
+            <a href="#"><span>Twit</span>Games</a>
+            <a href="#" class="sign-up">Sign Up</a>
+        </header>
+        <section>
+            <div id="divi" class="input-page"> 
+                <h3>Find Your Twitter Friendship Score</h3>
+                <form id="myForm" onsubmit="return validateForm(event)">
+                    <label for="field1"></label>
+                    <input type="text" id="field1" placeholder="Your Username" required>
+                
+                    <label for="field2"></label>
+                    <input type="text" placeholder="Your Frriend's Username" id="field2" required>
+                
+                    <div class="error-message" id="errorMessage"></div>
+                
+                    <button type="submit" id="lyath">Find</button>
+                  </form>
+            </div>
+            <div class="output-page" id="outp">
+                <h2>Your Twitter Friendship Score</h2>
+                <p id="result"></p>
+                <button href="#twitter" id="share-button">Share Your Score</button>
+                <a class="try" href="index.html">Try Again</a>
+            </div>
+        </section>
+        <se
         <script src="index.js"></script>
     </body>
 </html>

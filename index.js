@@ -14,8 +14,11 @@ function validateForm(event){
       var inPut =document.getElementById("divi")
       var ouPut =document.getElementById("outp")
 
-      if (field1Value === "" || field2Value === "") {
+      if (field1Value === "" || field2Value === "" ) {
         errorMessage.innerHTML = "Please fill in both fields.";
+        return false;
+      } else if(field1Value.toLowerCase().indexOf("@")=== -1 || field2Value.toLowerCase().indexOf("@")=== -1 ){
+        errorMessage.innerHTML="Please enter correct usernames";
         return false;
       }
 
