@@ -52,7 +52,7 @@ function rewrite(){
         })
         .catch(console.error);
       } else{
-        console.log("Not working")
+        alert("Your browser doesn't support sharing.Please copy paste.")
       }
     })
   }
