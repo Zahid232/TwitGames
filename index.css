@@ -56,9 +56,10 @@ span{
     flex-direction: column;
     background-color: rgb(219, 216, 216);
     padding: 40px 20px;
-    box-shadow: 1px 1px 20px rgb(62, 165, 224);
+    box-shadow: 5px 5px 20px rgb(161, 177, 180);
     animation-name: moveInRight;
     animation-duration: 2.5s;
+    border-radius: 20px;
 }
 
 .input-page h3{
@@ -92,7 +93,7 @@ form button{
     padding: 8px 12px;
     border-radius: 8px;
     border: none;
-    background-color: rgb(53, 187, 214);
+    background-color: rgb(247, 252, 253);
     font-weight: 600;
     letter-spacing: 1px;
     transition: all .45s ease;
@@ -189,7 +190,17 @@ a{
 }
 
 
+.footer{
+    background-color: #1f2937;
+    padding: 10px 20px;
+    text-align: center;
+}
 
+.footer a{
+    text-decoration: none;
+    color: whitesmoke;
+    text-align: center;
+}
 @keyframes moveInRight {
     0%{
         opacity: 0;
