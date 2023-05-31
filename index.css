@@ -151,25 +151,27 @@ form button:hover{
 
 .second{
     width: 100%;
+    background-color: rgb(53, 187, 214);
+    padding: 40px 0px;
 }
 
 
 .other-games{
-    background-color:  #dcdfe3;
-    padding: 30px 20px;
-    box-shadow: 1px 1px 10px rgb(81, 83, 84);
-    margin-top: 50px;
+    background-color:  black;
+    margin: 30px 20px;
+    box-shadow: 1px 1px 10px rgb(98, 158, 188);
     cursor: pointer;
     border-radius: 10px;
     transition: all .45s ease;
+    padding: 20px;
 }
 
 .other-games:hover{
-    background-color: #a9acaf;
+    background-color: #4a4c4f;
 }
 
 .other-games h3, .other-games h4{
-    color: black;
+    color: whitesmoke;
 }
 
 .other-games h4{
