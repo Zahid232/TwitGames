@@ -49,7 +49,7 @@ function rewrite(){
       if (navigator.share){
         navigator.share({ 
           title: "Twitter Friendship Score",
-          url: "https://visionary-chebakia-c1f2a5.netlify.app/",
+          url: "https://twitgames.netlify.app/",
           text: shareScore}).then(() => {
           console.log("Thanks");
         })
