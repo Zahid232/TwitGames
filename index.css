@@ -93,7 +93,7 @@ form button{
     padding: 8px 12px;
     border-radius: 8px;
     border: none;
-    background-color: rgb(247, 252, 253);
+    background-color:rgb(53, 187, 214) ;
     font-weight: 600;
     letter-spacing: 1px;
     transition: all .45s ease;
@@ -191,7 +191,7 @@ a{
 
 
 .footer{
-    background-color: #1f2937;
+    background-color: black;
     padding: 10px 20px;
     text-align: center;
 }
