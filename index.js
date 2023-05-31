@@ -26,7 +26,7 @@ function validateForm(event){
       ouPut.style.display = "flex";
       ouPut.style.animationName="moveInRight";
       ouPut.style.animationDuration="2.5s";
-      
+
       sCore = field1Value.length * field2Value.length
       if (sCore > 100){
         sCore=100
@@ -41,7 +41,7 @@ function validateForm(event){
 
 function rewrite(){
     var friendshipScore = "Yayy!! Your friendship score with " + field2Value+ " is " + sCore;
-    var shareScore = "My Twitter Friendship Score with" + field2Value + " is " + sCore + ". Find Yours at:"
+    var shareScore = "My Twitter Friendship Score with " + field2Value + " is " + sCore + ". Find Yours at:"
     document.getElementById("result").innerHTML = friendshipScore;
     
       const shareButton = document.getElementById('share-button');
