@@ -18,7 +18,7 @@ header{
     top: 0;
     left: 0;
     display: flex;
-    padding: 5px 20px;
+    padding: 10px 20px;
     align-items: center;
     background-color: #dcdfe3;
     width: 100%;
@@ -36,7 +36,7 @@ header a{
 .sign-up{
     font-size: 16px;
     font-weight: 500;
-    margin-left: 160px;
+    margin-left: 180px;
 }
 
 span{
