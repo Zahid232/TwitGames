@@ -24,6 +24,9 @@ function validateForm(event){
 
       inPut.style.display = "none";
       ouPut.style.display = "flex";
+      ouPut.style.animationName="moveInRight";
+      ouPut.style.animationDuration="2.5s";
+      
       sCore = field1Value.length * field2Value.length
       if (sCore > 100){
         sCore=100
