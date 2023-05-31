@@ -18,7 +18,7 @@ header{
     top: 0;
     left: 0;
     display: flex;
-    padding: 15px 20px;
+    padding: 5px 20px;
     align-items: center;
     background-color: #dcdfe3;
     width: 100%;
@@ -28,13 +28,13 @@ header{
 header a{
     text-decoration: none;
     color: #4a4c4f;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
 
 }
 
 .sign-up{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     margin-left: 160px;
 }
@@ -195,7 +195,7 @@ a{
     }
 
     50%{
-        transform: translate(-10px);
+        transform: translate(-20px);
     }
 
     100%{
