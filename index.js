@@ -38,7 +38,7 @@ function validateForm(event){
 
 function rewrite(){
     var friendshipScore = "Yayy!! Your friendship score with " + field2Value+ " is " + sCore;
-      
+    var shareScore = "My Twitter Friendship Score with" + field2Value + " is " + sCore + ". Find Yours at:"
     document.getElementById("result").innerHTML = friendshipScore;
     
       const shareButton = document.getElementById('share-button');
@@ -47,7 +47,7 @@ function rewrite(){
         navigator.share({ 
           title: "Twitter Friendship Score",
           url: "https://visionary-chebakia-c1f2a5.netlify.app/",
-          text: friendshipScore}).then(() => {
+          text: shareScore}).then(() => {
           console.log("Thanks");
         })
         .catch(console.error);
