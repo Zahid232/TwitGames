@@ -56,13 +56,14 @@ const getToken = async () => {
 
 
 function workAPI(){
+  const searchQuery =  field2Value 
   getToken()
   .then((result) => {
     const token = result;
     return token; // Return the value for subsequent chaining
   })
   .then((token) => {
-    fetch(`https://api.spotify.com/v1/search?q=${encodeURIComponent(field2Value)}&type=album`, {
+    fetch(`https://api.spotify.com/v1/search?q=${encodeURIComponent(searchQuery)}&type=track`, {
   headers: {
     Authorization: `Bearer ${token}`,
   },
@@ -70,9 +71,9 @@ function workAPI(){
   .then(response => response.json())
   .then(data => {
     console.log(data)
-    const randomNumber = Math.floor(Math.random()*10)
-    document.getElementById("kjk").setAttribute('href', data.albums.items[randomNumber].external_urls.spotify);
-    const imageUrl = data.albums.items[randomNumber].images[0].url; // Replace with the correct path to the image URL
+    document.getElementById("kjk").setAttribute('href', data.tracks.items[0].external_urls.spotify);
+    console.log(data.tracks.items[0].external_urls.spotify)
+    const imageUrl = data.tracks.items[0].album.images[0].url; // Replace with the correct path to the image URL
 
     document.getElementById("xook").style.backgroundImage = `url(${imageUrl})`;
   })
