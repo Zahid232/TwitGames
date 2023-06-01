@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="index.css">
-        <title>Twitter Friendship Score</title>
+        <title>Twitter Love Score</title>
+        <link rel="stylesheet" href="spotify.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,27 +13,20 @@
             <a href="#"><span>Twit</span>Games</a>
             <a href="#" class="sign-up">Sign Up</a>
         </header>
-        <section class="main">
-            <div id="divi" class="input-page"> 
-                <h3>Find Your Twitter Friendship Score</h3>
-                <form id="myForm" onsubmit="return validateForm(event)">
-                    <label for="field1"></label>
-                    <input type="text" id="field1" placeholder="Your Username" required>
-                
-                    <label for="field2"></label>
-                    <input type="text" placeholder="Your Frriend's Username" id="field2" required>
-                
-                    <div class="error-message" id="errorMessage"></div>
-                
-                    <button type="submit" id="lyath">Find</button>
-                  </form>
+        <section class="main" id="section">
+            <div class="input" id="input">
+                <input type="text" id="Username" placeholder="Enter Your Username" required>
+                <input type="text" id="prompt" placeholder="Define Yourself In One World" required>
+                <div class="error-message" id="errorMessage"></div>
+                <button type="submit" id="button-sub" onclick="xookmyoan()">Find Your Song</button>
             </div>
-            <div class="output-page" id="outp">
-                <h2>Your Twitter Friendship Score</h2>
-                <p id="result"></p>
-                <button href="#twitter" id="share-button">Share Your Score</button>
-                <a class="try" href="index.html">Try Again</a>
+            <div class="output" id="output">
+                <div id="xook"></div>
+                <a href="" id="kjk">Listen Your Song</a>
+                <a href="spotify.html" id="Try">Try Again</a>
             </div>
+            
+                
         </section>
         <section class="second">
             <a href="new.html">
@@ -48,7 +41,7 @@
                     <h4>Find Which Sher Suits You Based on Your Twitter Profile</h4>
                 </div>
             </a>
-            <a href="spotify.html">
+            <a href="new.html">
                 <div class="other-games">
                     <h3>Song Finder</h3>
                     <h4>Find Your Perfect Song Based on Your Twitter Profile</h4>
@@ -64,6 +57,7 @@
         <section class="footer">
             <a>All Rights Reserved @TwitGames</a>
         </section>
-        <script src="index.js"></script>
+
+        <script src="spotify.js"></script>
     </body>
 </html>

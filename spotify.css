@@ -1,0 +1,239 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #1f2937;
+    font-family: 'Palanquin', sans-serif;
+
+}
+
+body{
+    position: relative;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    padding: 10px 20px;
+    align-items: center;
+    background-color: #dcdfe3;
+    width: 100%;
+
+}
+
+header a{
+    text-decoration: none;
+    color: #4a4c4f;
+    font-size: 20px;
+    font-weight: 700;
+
+}
+
+.sign-up{
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 180px;
+}
+
+span{
+    color: rgb(53, 187, 214);
+}
+
+
+
+
+
+
+
+#section{
+    margin-top: 150px;
+    width: 100vw;
+    padding: 10px 20px;
+}
+
+.input{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(219, 216, 216);
+    padding: 40px 20px;
+    box-shadow: 5px 5px 20px rgb(161, 177, 180);
+    animation-name: moveInRight;
+    animation-duration: 2.5s;
+    border-radius: 20px;
+}
+
+
+.input h3{
+    font-size: 20px;
+}
+
+input{
+    margin-top: 35px;
+    padding: 8px 12px;
+    font-size: 18px;
+    border-radius: 4px;
+    border: none;
+    font-weight: 700;
+    outline: none;
+    transition: border .95s ease-in-out;
+}
+
+input:hover{
+    border: 1px solid rgb(53, 187, 214);
+}
+
+
+.input button{
+    margin-top: 35px;
+    font-size: 20px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    background-color:rgb(53, 187, 214) ;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all .45s ease;
+}
+
+.input button:hover{
+    background-color:rgb(25, 132, 153) ;
+}
+
+.output{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#xook{
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+    padding: 40px;
+    display: block;
+    box-shadow: 2px 2px 20px #1DB954;
+    animation-name: moveInRight;
+    animation-duration: 2.5s;
+}
+
+#kjk, #Try{
+    margin-top: 35px;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    background-color:#1DB954 ;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all .45s ease;
+}
+#Try{
+    background-color: aqua;
+}
+#kjk:hover{
+    background-color:rgb(25, 132, 153) ;
+}
+
+
+.second{
+    width: 100%;
+    background-color: #1DB954;
+    padding: 40px 0px;
+    margin-top: 100px;
+}
+
+
+.other-games{
+    background-color:  black;
+    margin: 30px 20px;
+    box-shadow: 1px 1px 10px rgb(98, 158, 188);
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all .45s ease;
+    padding: 20px;
+}
+
+.other-games:hover{
+    background-color: #4a4c4f;
+}
+
+.other-games h3, .other-games h4{
+    color: whitesmoke;
+}
+
+.other-games h4{
+    font-size: 14px;
+}
+
+.other-games h3{
+    color: rgb(53, 187, 214);
+    font-size: 22px;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+
+.footer{
+    background-color: black;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.footer a{
+    text-decoration: none;
+    color: whitesmoke;
+    text-align: center;
+}
+@keyframes moveInRight {
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    50%{
+        transform: translate(-20px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+
+@media only screen and (min-width: 800px) {
+    
+    .sign-up{
+        margin-left: 80vw;
+    }
+    
+    
+    .input-page{
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .output-page{
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .second {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .other-games{
+        padding: 80px;
+    }
+  }
