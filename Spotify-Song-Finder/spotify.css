@@ -156,6 +156,7 @@ input:hover{
     border-radius: 10px;
     transition: all .45s ease;
     padding: 20px;
+   
 }
 
 .other-games:hover{
@@ -192,6 +193,8 @@ a{
     color: whitesmoke;
     text-align: center;
 }
+
+
 @keyframes moveInRight {
     0%{
         opacity: 0;
@@ -235,5 +238,6 @@ a{
 
     .other-games{
         padding: 80px;
+        height: 260px;
     }
   }
