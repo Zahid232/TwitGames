@@ -215,15 +215,15 @@ a{
         margin-left: 80vw;
     }
     
-    
-    .input-page{
-        width: 500px;
+
+    .input{
+        width: 600px;
         margin-left: auto;
         margin-right: auto;
     }
 
-    .output-page{
-        width: 500px;
+    .output{
+        width: 600px;
         margin-left: auto;
         margin-right: auto;
     }

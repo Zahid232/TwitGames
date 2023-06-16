@@ -71,9 +71,10 @@ function workAPI(){
   .then(response => response.json())
   .then(data => {
     console.log(data)
-    document.getElementById("kjk").setAttribute('href', data.tracks.items[0].external_urls.spotify);
-    console.log(data.tracks.items[0].external_urls.spotify)
-    const imageUrl = data.tracks.items[0].album.images[0].url; // Replace with the correct path to the image URL
+    var xokkk = Math.floor(Math.random()*10)
+    document.getElementById("kjk").setAttribute('href', data.tracks.items[xokkk].external_urls.spotify);
+    console.log(data.tracks.items[xokkk].external_urls.spotify)
+    const imageUrl = data.tracks.items[xokkk].album.images[0].url; // Replace with the correct path to the image URL
 
     document.getElementById("xook").style.backgroundImage = `url(${imageUrl})`;
   })
