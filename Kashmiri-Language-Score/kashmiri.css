@@ -47,6 +47,63 @@ span{
     color: #1DB954;
 }
 
+
+
+
+
+.menu {
+    position: relative;
+    margin-left: 220px;
+  }
+  
+.menu-button {
+    padding: 10px;
+    background-color: whitesmoke;
+    border: none;
+    cursor: pointer;
+    
+}
+
+i{
+    font-size: 30px;
+}
+
+
+.menu-options {
+    position: absolute;
+    top: 100%;
+    left: -50px;
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    opacity: 0.7;
+    transition: display 0.5s ease-in-out;
+    animation: slide 1s;
+  }
+  
+  .menu-options li {
+    background-color: #fff;
+    padding: 10px;
+  }
+  
+  .menu-options li:hover {
+    background-color: #f0f0f0;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
 body{
     background-image: url("https://images.unsplash.com/photo-1627894485229-ff2c619723e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
     opacity: 1;
@@ -209,7 +266,7 @@ input[type="radio"] {
     left: 40%;
     top: 5px;
 }
-button{
+#but{
     width: 160px;
     background-color: #1DB954;
     border: none;
@@ -222,7 +279,7 @@ button{
     cursor: pointer;
 }
 
-button:hover{
+#but:hover{
     background-color: #179744;
     /* transform: scale(.95); */
 }
@@ -361,6 +418,44 @@ a{
     0%{
         opacity: 0;
         transform: translateY(50px);
+    }
+    25%{
+        opacity: 0.25;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    75%{
+        opacity: 0.75;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+@keyframes slide{
+    0%{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    25%{
+        opacity: 0.1;
+    }
+    50%{
+        opacity: 0.3;
+    }
+    75%{
+        opacity: 0.45;
+    }
+    100%{
+        opacity: 0.7;
+    }
+}
+
+@keyframes appear{
+    0%{
+        opacity: 0;
     }
     25%{
         opacity: 0.25;

@@ -2,6 +2,46 @@
 
 let score = 0;
 
+
+
+
+const menuButton = document.querySelector('.menu-button');
+const menuOptions = document.querySelector('.menu-options');
+const mennu = document.querySelector(".godniuk");
+const cross = document.querySelector(".doyim");
+
+
+
+menuOptions.style.display = 'none';
+cross.style.display = 'none';
+
+// Toggle menu options visibility and button state
+menuButton.addEventListener('click', () => {
+
+  if (menuOptions.style.display === 'none') {
+    // Show dropdown menu and change button to cross
+    menuOptions.style.display = 'block';
+    mennu.style.display="none";
+    cross.style.display="block";
+    cross.style.animation="appear 1s";
+  } else {
+    // Hide dropdown menu and change button to menu
+    menuOptions.style.display = 'none';
+    mennu.style.display="block";
+    mennu.style.animation="appear 1s"
+    cross.style.display="none";
+  }
+});
+
+
+
+
+
+
+
+
+
+
 const elementsToAnimate = document.querySelectorAll('.other-games'); // Replace '.animate' with a CSS selector that targets the elements you want to animate
 
 
