@@ -52,6 +52,7 @@ function rewrite(){
           url: "https://twitgames.netlify.app/",
           text: shareScore}).then(() => {
           console.log("Thanks");
+          alert("Thanks")
         })
         .catch(console.error);
       } else{

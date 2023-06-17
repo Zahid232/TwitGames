@@ -84,7 +84,7 @@ function handleQuestion(event, questionId, answerValue) {
 
 
   const shareButton = document.getElementById('share-button');
-  var shareScore = "My Kashmiri Language Score is " + sCore + " . Find Yours at:"
+  var shareScore = "My Kashmiri Language Score is " + score + " . Find Yours at:"
       shareButton.addEventListener('click', event =>{
       if (navigator.share){
         navigator.share({ 
