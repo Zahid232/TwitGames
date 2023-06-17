@@ -112,12 +112,12 @@ section{
 
 
 #q1{
-    animation: slideRight 1.5s;
+    animation: slideRight 1s;
     margin-left: 30px;
 }
 #q2, #q3, #q4, #q5, #q6, #q7, #q8, #q9, #q10{
     display: none;
-    animation: slideRight 1.5s;
+    animation: slideRight 1s;
     margin-left: 30px;
 }
 
@@ -129,6 +129,7 @@ input[type="radio"] {
     transform: scale(1.7); /* Adjust the scale value to increase or decrease the size */
     margin-right: 4px;
     text-align: top;
+    cursor: pointer;
 }
   
 .question-option{
@@ -204,6 +205,7 @@ button{
     letter-spacing: 1px;
     transition: all .45s ease;
     opacity: 1.6;
+    cursor: pointer;
 }
 
 button:hover{
@@ -319,7 +321,7 @@ a{
 @keyframes slideRight{
     0%{
         opacity: 0;
-        transform: translateX(-40px);
+        transform: translateY(5px);
     }
     25%{
         opacity: 0.25;
