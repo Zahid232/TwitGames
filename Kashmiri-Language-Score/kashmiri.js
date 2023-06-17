@@ -81,16 +81,41 @@ function handleQuestion(event, questionId, answerValue) {
 
 function share(){
   
+  // const shareButton = document.getElementById('share-button');
+  // const sharing = document.getElementById('sharing');
+
+  // var shareScore = "My Kashmiri Language Score is " + score + ". Find Yours at:";
+
+  // shareButton.addEventListener('click', event => {
+    
+  //   if (navigator.share) {
+  //     html2canvas(sharing).then(canvas => {
+  //       canvas.toBlob(blob => {
+  //         const file = new File([blob], 'code_snippet.png', { type: 'image/png' });
+  //         navigator.share({
+  //           title: "Kashur Kotah Zaanakh",
+  //           url: "https://twitgames.netlify.app/kashmiri-language-score/",
+  //           text: shareScore,
+  //           files: [file]
+  //         }).then(() => {
+  //           console.log("Thanks");
+  //         }).catch(console.error);
+  //       }, 'image/png');
+  //     });
+  //   } else {
+  //     alert("Your browser doesn't support sharing. Please copy and paste.");
+  //   }
+  // });
   const shareButton = document.getElementById('share-button');
-  const sharing = document.getElementById('sharing');
+  const codeSnippetElement = document.getElementById('code-snippet'); // Replace 'code-snippet' with the ID of your code snippet element
 
   var shareScore = "My Kashmiri Language Score is " + score + ". Find Yours at:";
 
   shareButton.addEventListener('click', event => {
-    
+    shareButton.style.display = 'none'; // Hide the share button temporarily
+
     if (navigator.share) {
-      shareButton.style.display='none';
-      html2canvas(sharing).then(canvas => {
+      html2canvas(codeSnippetElement).then(canvas => {
         canvas.toBlob(blob => {
           const file = new File([blob], 'code_snippet.png', { type: 'image/png' });
           navigator.share({
@@ -102,11 +127,15 @@ function share(){
             console.log("Thanks");
           }).catch(console.error);
         }, 'image/png');
+      }).finally(() => {
+        shareButton.style.display = ''; // Restore the visibility of the share button
       });
     } else {
       alert("Your browser doesn't support sharing. Please copy and paste.");
+      shareButton.style.display = ''; // Restore the visibility of the share button
     }
   });
+
 
   
 }
