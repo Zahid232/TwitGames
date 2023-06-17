@@ -121,18 +121,16 @@ shareButton.addEventListener('click', event => {
       shareButtonClone.remove(); // Remove the share button from the cloned element
     }
 
-    html2canvas(clonedCodeSnippet).then(canvas => {
-      canvas.toBlob(blob => {
-        const file = new File([blob], 'code_snippet.png', { type: 'image/png' });
-        navigator.share({
-          title: "Kashur Kotah Zaanakh",
-          url: "https://twitgames.netlify.app/kashmiri-language-score/",
-          text: shareScore,
-          files: [file]
-        }).then(() => {
-          console.log("Thanks");
-        }).catch(console.error);
-      }, 'image/png');
+    domtoimage.toBlob(clonedCodeSnippet).then(blob => {
+      const file = new File([blob], 'code_snippet.png', { type: 'image/png' });
+      navigator.share({
+        title: "Kashur Kotah Zaanakh",
+        url: "https://twitgames.netlify.app/kashmiri-language-score/",
+        text: shareScore,
+        files: [file]
+      }).then(() => {
+        console.log("Thanks");
+      }).catch(console.error);
     }).finally(() => {
       shareButton.style.visibility = ''; // Restore the visibility of the share button
     });
