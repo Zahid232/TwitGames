@@ -84,7 +84,7 @@ function share(){
   const shareButton = document.getElementById('share-button');
   const sharing = document.getElementById('sharing');
 
-  var shareScore = "My Kashmiri Language bh Score is " + score + ". Find Yours at:";
+  var shareScore = "My Kashmiri Language Score is " + score + ". Find Yours at:";
 
   shareButton.addEventListener('click', event => {
     
