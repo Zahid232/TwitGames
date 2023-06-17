@@ -303,7 +303,6 @@ input[type="radio"] {
 
 .other-games{
     background-color:  black;
-    opacity: 0.8;
     margin: 30px 20px;
     box-shadow: 1px 1px 10px rgb(98, 158, 188);
     cursor: pointer;
@@ -315,7 +314,7 @@ input[type="radio"] {
 }
 
 .animation-class{
-    animation: slideUp 3s;
+    animation: slideUp 2s;
     opacity: 1;
 }
 
@@ -420,16 +419,16 @@ a{
         transform: translateY(50px);
     }
     25%{
-        opacity: 0.25;
+        opacity: 0.2;
     }
     50%{
-        opacity: 0.5;
+        opacity: 0.4;
     }
     75%{
-        opacity: 0.75;
+        opacity: 0.60;
     }
     100%{
-        opacity: 1;
+        opacity: 0.8;
     }
 }
 
