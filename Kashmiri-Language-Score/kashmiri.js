@@ -81,6 +81,34 @@ function handleQuestion(event, questionId, answerValue) {
 
 function share(){
   
+  // const shareButton = document.getElementById('share-button');
+
+  // var shareScore = "My Kashmiri Language Score is " + score + ". Find Yours at:";
+
+  // shareButton.addEventListener('click', event => {
+  //   shareButton.style.display = 'none'; // Hide the share button temporarily
+
+  //   if (navigator.share) {
+  //     html2canvas(content, { useCORS: true }).then(canvas => {
+  //       canvas.toBlob(blob => {
+  //         const file = new File([blob], 'code_snippet.png', { type: 'image/png' });
+  //         navigator.share({
+  //           title: "Kashur Kotah Zaanakh",
+  //           url: "https://twitgames.netlify.app/kashmiri-language-score/",
+  //           text: shareScore,
+  //           files: [file]
+  //         }).then(() => {
+  //           console.log("Thanks");
+  //         }).catch(console.error);
+  //       }, 'image/png');
+  //     }).finally(() => {
+  //       shareButton.style.display = ''; // Restore the display of the share button
+  //     });
+  //   } else {
+  //     alert("Your browser doesn't support sharing. Please copy and paste.");
+  //     shareButton.style.display = ''; // Restore the display of the share button
+  //   }
+  // });
   const shareButton = document.getElementById('share-button');
 
   var shareScore = "My Kashmiri Language Score is " + score + ". Find Yours at:";
@@ -90,18 +118,17 @@ function share(){
 
     if (navigator.share) {
       html2canvas(content, { useCORS: true }).then(canvas => {
-        canvas.toBlob(blob => {
-          const file = new File([blob], 'code_snippet.png', { type: 'image/png' });
-          navigator.share({
-            title: "Kashur Kotah Zaanakh",
-            url: "https://twitgames.netlify.app/kashmiri-language-score/",
-            text: shareScore,
-            files: [file]
-          }).then(() => {
-            console.log("Thanks");
-          }).catch(console.error);
-        }, 'image/png');
-      }).finally(() => {
+        const linkElement = document.createElement('a');
+        linkElement.href = "https://twitgames.netlify.app/kashmiri-language-score/"; // Replace with your desired URL
+
+        const imageElement = document.createElement('img');
+        imageElement.src = canvas.toDataURL();
+        linkElement.appendChild(imageElement);
+
+        linkElement.click();
+
+        linkElement.remove(); // Optional: Clean up the temporary link element
+
         shareButton.style.display = ''; // Restore the display of the share button
       });
     } else {
@@ -109,6 +136,7 @@ function share(){
       shareButton.style.display = ''; // Restore the display of the share button
     }
   });
+
 
   
 
