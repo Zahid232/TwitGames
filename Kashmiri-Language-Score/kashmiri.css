@@ -253,11 +253,13 @@ button:hover{
     border-radius: 10px;
     transition: all .45s ease;
     padding: 20px;
+    opacity: 0;
    
 }
 
 .animation-class{
     animation: slideRight 2s;
+    opacity: 1;
 }
 
 .other-games:hover{
@@ -339,7 +341,7 @@ a{
 @keyframes slideRight{
     0%{
         opacity: 0;
-        transform: translateY(5px);
+        transform: translateY(50px);
     }
     25%{
         opacity: 0.25;

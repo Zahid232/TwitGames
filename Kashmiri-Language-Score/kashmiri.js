@@ -5,17 +5,18 @@ let score = 0;
 const elementsToAnimate = document.querySelectorAll('.other-games'); // Replace '.animate' with a CSS selector that targets the elements you want to animate
 
 
+
 const options = {
-  root: visualViewport, // Use the viewport as the root
-  rootMargin: '0px', // No margin around the root
-  threshold: 0.2, // Trigger when 20% of the target element is visible
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.2,
 };
 
 const intersectionObserver = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('animation-class'); // Replace 'animation-class' with the class that applies the animation to the element
-      observer.unobserve(entry.target); // Stop observing the element after it becomes visible
+      entry.target.classList.add('animation-class');
+      observer.unobserve(entry.target);
     }
   });
 }, options);
@@ -23,6 +24,25 @@ const intersectionObserver = new IntersectionObserver((entries, observer) => {
 elementsToAnimate.forEach(element => {
   intersectionObserver.observe(element);
 });
+
+// Manually check visibility of the first element on page load
+const firstElement = elementsToAnimate[0];
+const firstElementVisible = isElementVisible(firstElement);
+if (firstElementVisible) {
+  firstElement.classList.add('animation-class');
+  intersectionObserver.unobserve(firstElement);
+}
+
+// Function to check if an element is visible in the viewport
+function isElementVisible(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
 
 
 
