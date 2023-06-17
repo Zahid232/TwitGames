@@ -83,12 +83,13 @@ function share(){
   
   const shareButton = document.getElementById('share-button');
 
-
   var shareScore = "My Kashmiri Language Score is " + score + ". Find Yours at:";
 
   shareButton.addEventListener('click', event => {
+    shareButton.style.display = 'none'; // Hide the share button temporarily
+
     if (navigator.share) {
-      html2canvas(content).then(canvas => {
+      html2canvas(content, { useCORS: true }).then(canvas => {
         canvas.toBlob(blob => {
           const file = new File([blob], 'code_snippet.png', { type: 'image/png' });
           navigator.share({
@@ -100,9 +101,12 @@ function share(){
             console.log("Thanks");
           }).catch(console.error);
         }, 'image/png');
+      }).finally(() => {
+        shareButton.style.display = ''; // Restore the display of the share button
       });
     } else {
       alert("Your browser doesn't support sharing. Please copy and paste.");
+      shareButton.style.display = ''; // Restore the display of the share button
     }
   });
 
