@@ -107,7 +107,7 @@ function share(){
   //   }
   // });
   const shareButton = document.getElementById('share-button');
-  const codeSnippetElement = document.getElementById('code-snippet'); // Replace 'code-snippet' with the ID of your code snippet element
+  const codeSnippetElement = document.getElementById('sharing'); // Replace 'code-snippet' with the ID of your code snippet element
 
   var shareScore = "My Kashmiri Language Score is " + score + ". Find Yours at:";
 
