@@ -82,14 +82,13 @@ function handleQuestion(event, questionId, answerValue) {
 function share(){
   
   const shareButton = document.getElementById('share-button');
-  const sharing = document.getElementById('sharing');
+
 
   var shareScore = "My Kashmiri Language Score is " + score + ". Find Yours at:";
 
   shareButton.addEventListener('click', event => {
-    
     if (navigator.share) {
-      html2canvas(sharing).then(canvas => {
+      html2canvas(content).then(canvas => {
         canvas.toBlob(blob => {
           const file = new File([blob], 'code_snippet.png', { type: 'image/png' });
           navigator.share({
@@ -106,6 +105,7 @@ function share(){
       alert("Your browser doesn't support sharing. Please copy and paste.");
     }
   });
+
   
 
   
