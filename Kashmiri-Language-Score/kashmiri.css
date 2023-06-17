@@ -256,6 +256,10 @@ button:hover{
    
 }
 
+.animation-class{
+    animation: slideRight 2s;
+}
+
 .other-games:hover{
     background-color: #4a4c4f;
 }
@@ -380,3 +384,4 @@ a{
         height: 260px;
     }
   }
+
