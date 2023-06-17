@@ -309,13 +309,12 @@ input[type="radio"] {
     border-radius: 10px;
     transition: all .45s ease;
     padding: 20px;
-    opacity: 0;
    
 }
 
 .animation-class{
     animation: slideUp 2s;
-    opacity: 1;
+    opacity: 0.7;
 }
 
 .other-games:hover{
@@ -418,17 +417,8 @@ a{
         opacity: 0;
         transform: translateY(50px);
     }
-    25%{
-        opacity: 0.2;
-    }
-    50%{
-        opacity: 0.4;
-    }
-    75%{
-        opacity: 0.60;
-    }
     100%{
-        opacity: 0.8;
+        opacity: 0.7;
     }
 }
 
