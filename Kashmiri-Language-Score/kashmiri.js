@@ -107,35 +107,40 @@ function share(){
   //   }
   // });
   const shareButton = document.getElementById('share-button');
-  const codeSnippetElement = document.getElementById('sharing'); // Replace 'code-snippet' with the ID of your code snippet element
+const codeSnippetElement = document.getElementById('sharing'); // Replace 'code-snippet' with the ID of your code snippet element
 
-  var shareScore = "My Kashmiri Language Score is " + score + ". Find Yours at:";
+var shareScore = "My Kashmiri Language Score is " + score + ". Find Yours at:";
 
-  shareButton.addEventListener('click', event => {
-    shareButton.style.display = 'none'; // Hide the share button temporarily
+shareButton.addEventListener('click', event => {
+  shareButton.style.visibility = 'hidden'; // Hide the share button temporarily
 
-    if (navigator.share) {
-      html2canvas(codeSnippetElement).then(canvas => {
-        canvas.toBlob(blob => {
-          const file = new File([blob], 'code_snippet.png', { type: 'image/png' });
-          navigator.share({
-            title: "Kashur Kotah Zaanakh",
-            url: "https://twitgames.netlify.app/kashmiri-language-score/",
-            text: shareScore,
-            files: [file]
-          }).then(() => {
-            console.log("Thanks");
-          }).catch(console.error);
-        }, 'image/png');
-      }).finally(() => {
-        shareButton.style.display = ''; // Restore the visibility of the share button
-      });
-    } else {
-      alert("Your browser doesn't support sharing. Please copy and paste.");
-      shareButton.style.display = ''; // Restore the visibility of the share button
+  if (navigator.share) {
+    const clonedCodeSnippet = codeSnippetElement.cloneNode(true);
+    const shareButtonClone = clonedCodeSnippet.querySelector('#share-button');
+    if (shareButtonClone) {
+      shareButtonClone.remove(); // Remove the share button from the cloned element
     }
-  });
 
+    html2canvas(clonedCodeSnippet).then(canvas => {
+      canvas.toBlob(blob => {
+        const file = new File([blob], 'code_snippet.png', { type: 'image/png' });
+        navigator.share({
+          title: "Kashur Kotah Zaanakh",
+          url: "https://twitgames.netlify.app/kashmiri-language-score/",
+          text: shareScore,
+          files: [file]
+        }).then(() => {
+          console.log("Thanks");
+        }).catch(console.error);
+      }, 'image/png');
+    }).finally(() => {
+      shareButton.style.visibility = ''; // Restore the visibility of the share button
+    });
+  } else {
+    alert("Your browser doesn't support sharing. Please copy and paste.");
+    shareButton.style.visibility = ''; // Restore the visibility of the share button
+  }
+});
 
   
 }
