@@ -13,25 +13,25 @@ function handleQuestion(event, questionId, answerValue) {
     } else {
       score -= 3;
     }
-    
+    console.log(score)
     document.getElementById(questionId).style.display = 'none';
-  
+
     const nextQuestionId = parseInt(questionId.slice(1)) + 1;
-    document.getElementById(`q${nextQuestionId}`).style.display = 'block';
+    document.getElementById(`q${nextQuestionId}`).style.display= 'block';
   }
   
 
   const answerValues = {
     chal1: "A",
     chal2: "B",
-    chal3: "C",
-    chal4: "C",
+    chal3: "B",
+    chal4: "A",
     chal5: "C",
     chal6: "C",
-    chal7: "C",
-    chal8: "C",
+    chal7: "A",
+    chal8: "B",
     chal9: "C",
-    chal10: "C",
+    chal10: "B",
     // Add more answer values as needed
   };
   
@@ -81,3 +81,20 @@ function handleQuestion(event, questionId, answerValue) {
         content.classList.remove("hidden");
       }, 3000);
   }
+
+
+  const shareButton = document.getElementById('share-button');
+  var shareScore = "My Kashmiri Language Score is " + sCore + " . Find Yours at:"
+      shareButton.addEventListener('click', event =>{
+      if (navigator.share){
+        navigator.share({ 
+          title: "Kashmiri Language Score",
+          url: "https://twitgames.netlify.app/kashmiri-language-score/",
+          text: shareScore}).then(() => {
+          console.log("Thanks");
+        })
+        .catch(console.error);
+      } else{
+        alert("Your browser doesn't support sharing.Please copy paste.")
+      }
+    })
