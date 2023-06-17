@@ -80,10 +80,13 @@ function handleQuestion(event, questionId, answerValue) {
         loadingButton.style.display = "none";
         content.classList.remove("hidden");
       }, 3000);
+      share()
   }
 
 
+function share(){
   const shareButton = document.getElementById('share-button');
+  console.log(score)
   var shareScore = "My Kashmiri Language Score is " + score + " . Find Yours at:"
       shareButton.addEventListener('click', event =>{
       if (navigator.share){
@@ -98,3 +101,4 @@ function handleQuestion(event, questionId, answerValue) {
         alert("Your browser doesn't support sharing.Please copy paste.")
       }
     })
+}
