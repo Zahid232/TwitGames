@@ -6,14 +6,12 @@ let score = 0;
 
 function handleQuestion(event, questionId, answerValue) {
     event.preventDefault();
-    const answer = document.querySelector(`input[name="${questionId}"]:checked`).value;
-  
+    const answer = document.querySelector(`input[name="${questionId}"]:checked`).value;  
     if (answer === answerValue) {
       score = score + 10;
     } else {
       score -= 3;
     }
-    console.log(score)
     document.getElementById(questionId).style.display = 'none';
 
     const nextQuestionId = parseInt(questionId.slice(1)) + 1;
@@ -32,7 +30,6 @@ function handleQuestion(event, questionId, answerValue) {
     chal8: "B",
     chal9: "C",
     chal10: "B",
-    // Add more answer values as needed
   };
   
   for (let i = 1; i <= 9; i++) {
@@ -48,14 +45,12 @@ function handleQuestion(event, questionId, answerValue) {
   function chal10(event){
     event.preventDefault();
     const answer1 = document.querySelector('input[name="q10"]:checked').value;
-    console.log('Answer 10:', answer1);
 
     if (answer1==="A"){
             score+=10;
     }else{
         score-=3;
     }
-    console.log(score)
     document.getElementById("questions").style.display='none';
     document.getElementById("load").style.display='block';
     document.getElementById("resultvalue").innerHTML+=score;
@@ -66,7 +61,7 @@ function handleQuestion(event, questionId, answerValue) {
     } else if (score>50 && score<75){
         advice.innerHTML="Your Kashmiri is decent enough but you should still try learning more about it."
     }else{
-        advice.innerHTML="Your Kashmiri is very good. You should try helping people speak more Kashmiri."
+        advice.innerHTML="Your Kashmiri is very good. You should try to promote the language among your people."
     }
 
 
@@ -85,20 +80,46 @@ function handleQuestion(event, questionId, answerValue) {
 
 
 function share(){
-  const shareButton = document.getElementById('share-button');
-  console.log(score)
-  var shareScore = "My Kashmiri Language Score is " + score + " . Find Yours at:"
-      shareButton.addEventListener('click', event =>{
-      if (navigator.share){
-        navigator.share({ 
-          title: "Kashmiri Language Score",
-          url: "https://twitgames.netlify.app/kashmiri-language-score/",
-          text: shareScore}).then(() => {
+  // const shareButton = document.getElementById('share-button');
+  // console.log(score)
+  // var shareScore = "My Kashmiri Language Score is " + score + " . Find Yours at:"
+  //     shareButton.addEventListener('click', event =>{
+  //     if (navigator.share){
+  //       navigator.share({ 
+  //         title: "Kashur Kotah Zaanakh",
+  //         url: "https://twitgames.netlify.app/kashmiri-language-score/",
+  //         text: shareScore}).then(() => {
+  //         console.log("Thanks");
+  //       })
+  //       .catch(console.error);
+  //     } else{
+  //       alert("Your browser doesn't support sharing.Please copy paste.")
+  //     }
+    // })
+
+    const shareButton = document.getElementById('share-button');
+    console.log(score);
+    var shareScore = "My Kashmiri Language Score is " + score + " . Find Yours at:";
+    shareButton.addEventListener('click', event => {
+      if (navigator.share) {
+        navigator.share({
+          title: "Kashur Kotah Zaanakh",
+          text: shareScore,
+          url: "https://twitgames.netlify.app/kashmiri-language-score/"
+        }).then(() => {
           console.log("Thanks");
-        })
-        .catch(console.error);
-      } else{
-        alert("Your browser doesn't support sharing.Please copy paste.")
+        }).catch(console.error);
+      } else if (navigator.canShare && navigator.canShare({ text: shareScore, url: "https://twitgames.netlify.app/kashmiri-language-score/" })) {
+        navigator.canShare({
+          text: shareScore,
+          url: "https://twitgames.netlify.app/kashmiri-language-score/"
+        }).then(() => {
+          // Use the Twitter sharing API
+          window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(shareScore) + '&url=' + encodeURIComponent("https://twitgames.netlify.app/kashmiri-language-score/"));
+        }).catch(console.error);
+      } else {
+        alert("Your browser doesn't support sharing. Please copy and paste.");
       }
-    })
+    });
+    
 }
