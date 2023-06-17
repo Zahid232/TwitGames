@@ -80,47 +80,22 @@ function handleQuestion(event, questionId, answerValue) {
 
 
 function share(){
-  // const shareButton = document.getElementById('share-button');
-  // console.log(score)
-  // var shareScore = "My Kashmiri Language Score is " + score + " . Find Yours at:"
-  //     shareButton.addEventListener('click', event =>{
-  //     if (navigator.share){
-  //       navigator.share({ 
-  //         title: "Kashur Kotah Zaanakh",
-  //         url: "https://twitgames.netlify.app/kashmiri-language-score/",
-  //         text: shareScore}).then(() => {
-  //         console.log("Thanks");
-  //       })
-  //       .catch(console.error);
-  //     } else{
-  //       alert("Your browser doesn't support sharing.Please copy paste.")
-  //     }
-  //   })
-
-
   const shareButton = document.getElementById('share-button');
-  const codeSnippetElement = document.getElementById('content'); // Replace 'code-snippet' with the ID of your code snippet element
+  console.log(score)
+  var shareScore = "My Kashmiri Language Score is " + score + " . Find Yours at:"
+      shareButton.addEventListener('click', event =>{
+      if (navigator.share){
+        navigator.share({ 
+          title: "Kashur Kotah Zaanakh",
+          url: "https://twitgames.netlify.app/kashmiri-language-score/",
+          text: shareScore}).then(() => {
+          console.log("Thanks");
+        })
+        .catch(console.error);
+      } else{
+        alert("Your browser doesn't support sharing.Please copy paste.")
+      }
+    })
 
-  var shareScore = "My Kashmiri Language Score is " + score + ". Find Yours at:";
-
-  shareButton.addEventListener('click', event => {
-    if (navigator.share) {
-      html2canvas(codeSnippetElement).then(canvas => {
-        canvas.toBlob(blob => {
-          const file = new File([blob], 'code_snippet.png', { type: 'image/png' });
-          navigator.share({
-            title: "Kashur Kotah Zaanakh",
-            url: "https://twitgames.netlify.app/kashmiri-language-score/",
-            text: shareScore,
-            files: [file]
-          }).then(() => {
-            console.log("Thanks");
-          }).catch(console.error);
-        }, 'image/png');
-      });
-    } else {
-      alert("Your browser doesn't support sharing. Please copy and paste.");
-    }
-  });
-
+  
 }
