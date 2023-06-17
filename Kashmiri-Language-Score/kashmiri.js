@@ -87,6 +87,7 @@ function share(){
   var shareScore = "My Kashmiri Language Score is " + score + ". Find Yours at:";
 
   shareButton.addEventListener('click', event => {
+    shareButton.style.display='none';
     if (navigator.share) {
       html2canvas(sharing).then(canvas => {
         canvas.toBlob(blob => {
