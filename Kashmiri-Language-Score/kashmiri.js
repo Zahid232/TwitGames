@@ -9,7 +9,7 @@ const elementsToAnimate = document.querySelectorAll('.other-games'); // Replace 
 const options = {
   root: null,
   rootMargin: '0px',
-  threshold: 0.2,
+  threshold: 0.6,
 };
 
 const intersectionObserver = new IntersectionObserver((entries, observer) => {

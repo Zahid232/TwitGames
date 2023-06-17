@@ -258,7 +258,7 @@ button:hover{
 }
 
 .animation-class{
-    animation: slideRight 2s;
+    animation: slideUp 3s;
     opacity: 1;
 }
 
@@ -339,6 +339,25 @@ a{
 
 
 @keyframes slideRight{
+    0%{
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    25%{
+        opacity: 0.25;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    75%{
+        opacity: 0.75;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp{
     0%{
         opacity: 0;
         transform: translateY(50px);
