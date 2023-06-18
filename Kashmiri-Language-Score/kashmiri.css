@@ -266,7 +266,7 @@ input[type="radio"] {
     left: 40%;
     top: 5px;
 }
-#but{
+#but, #share-button{
     width: 160px;
     background-color: #1DB954;
     border: none;
@@ -309,6 +309,7 @@ input[type="radio"] {
     border-radius: 10px;
     transition: all .45s ease;
     padding: 20px;
+    opacity: 0;
    
 }
 
