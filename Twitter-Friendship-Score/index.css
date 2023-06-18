@@ -1,0 +1,248 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #1f2937;
+    font-family: 'Palanquin', sans-serif;
+
+}
+
+body{
+    position: relative;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    padding: 10px 20px;
+    align-items: center;
+    background-color: #dcdfe3;
+    width: 100%;
+
+}
+
+header a{
+    text-decoration: none;
+    color: #4a4c4f;
+    font-size: 20px;
+    font-weight: 700;
+
+}
+
+.sign-up{
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 180px;
+}
+
+span{
+    color: rgb(53, 187, 214);
+}
+
+
+.main{
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 220px;
+    margin-bottom: 100px;
+}
+
+.input-page{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(219, 216, 216);
+    padding: 40px 20px;
+    box-shadow: 5px 5px 20px rgb(161, 177, 180);
+    animation-name: moveInRight;
+    animation-duration: 2.5s;
+    border-radius: 20px;
+}
+
+.input-page h3{
+    font-size: 20px;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    margin-top: 35px;
+    padding: 8px 12px;
+    font-size: 18px;
+    border-radius: 4px;
+    border: none;
+    font-weight: 700;
+    outline: none;
+    transition: border .95s ease-in-out;
+}
+
+input:hover{
+    border: 1px solid rgb(53, 187, 214);
+}
+
+form button{
+    margin-top: 35px;
+    font-size: 20px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    background-color:rgb(53, 187, 214) ;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all .45s ease;
+}
+
+form button:hover{
+    background-color:rgb(25, 132, 153) ;
+}
+
+.output-page{
+    display: none;
+    flex-direction: column;
+    background-color: rgb(219, 216, 216);
+    padding: 40px 20px;
+    box-shadow: 1px 1px 10px rgb(53, 187, 214);
+}
+
+.output-page h2{
+    text-align: center;
+    font-size: 22px;
+}
+
+.output-page p {
+    margin-top: 30px;
+    font-size: 17px;
+    font-weight: 600;
+    min-height: 100px;
+    background-color: rgb(53, 187, 214);
+    letter-spacing: 1px;
+    line-height: 25px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.output-page button{
+    margin-top: 40px;
+    font-size: 16px;
+    padding: 8px 80px;
+    border-radius: 8px;
+    border: none;
+    background-color: rgb(62, 165, 224);
+    font-weight: 600;
+}
+
+.output-page a{
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 30px;
+    padding: 8px 110px;
+    border-radius: 8px;
+    border: none;
+    background-color: whitesmoke;
+    font-weight: 600;
+    text-align: center;
+}
+
+.second{
+    width: 100%;
+    background-color: rgb(53, 187, 214);
+    padding: 40px 0px;
+}
+
+
+.other-games{
+    background-color:  black;
+    margin: 30px 20px;
+    box-shadow: 1px 1px 10px rgb(98, 158, 188);
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all .45s ease;
+    padding: 20px;
+}
+
+.other-games:hover{
+    background-color: #4a4c4f;
+}
+
+.other-games h3, .other-games h4{
+    color: whitesmoke;
+}
+
+.other-games h4{
+    font-size: 14px;
+}
+
+.other-games h3{
+    color: rgb(53, 187, 214);
+    font-size: 22px;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+
+.footer{
+    background-color: black;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.footer a{
+    text-decoration: none;
+    color: whitesmoke;
+    text-align: center;
+}
+@keyframes moveInRight {
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    50%{
+        transform: translate(-20px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+
+@media only screen and (min-width: 800px) {
+    
+    .sign-up{
+        margin-left: 80vw;
+    }
+    
+    
+    .input-page{
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .output-page{
+        width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .second {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .other-games{
+        padding: 80px;
+    }
+  }

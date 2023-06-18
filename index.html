@@ -2,60 +2,58 @@
 <html>
     <head>
         <link rel="stylesheet" href="index.css">
-        <title>Twitter Friendship Score</title>
+        <title>TwitGames</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700&family=Palanquin:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/64f8a0bc37.js" crossorigin="anonymous"></script>
     </head>
-    <body>
+    <body id="xook">
         <header>
-            <a href="#"><span>Twit</span>Games</a>
-            <a href="#" class="sign-up">Sign Up</a>
+            <a href="#"><span id="title">Twit</span>Games</a>
+            
+            <div class="menu">
+                <button class="menu-button">
+                    <i class="fa-solid fa-bars godniuk"></i>
+                </button>
+            </div>
+            <ul class="menu-options">
+                <div class="drop-down">
+                    <button class="close-button" onclick="challl()"><i class="fa-solid fa-xmark doyim"></i></button>
+                    <h4>Menu</h4>
+                </div>
+                <li>Kashmiri Language Score</li>
+                <li>Twitter Language Score</li>
+                <li>Spotify Song Finder</li>
+            </ul>
         </header>
-        <section class="main">
-            <div id="divi" class="input-page"> 
-                <h3>Find Your Twitter Friendship Score</h3>
-                <form id="myForm" onsubmit="return validateForm(event)">
-                    <label for="field1"></label>
-                    <input type="text" id="field1" placeholder="Your Username" required>
-                
-                    <label for="field2"></label>
-                    <input type="text" placeholder="Your Frriend's Username" id="field2" required>
-                
-                    <div class="error-message" id="errorMessage"></div>
-                
-                    <button type="submit" id="lyath">Find</button>
-                  </form>
-            </div>
-            <div class="output-page" id="outp">
-                <h2>Your Twitter Friendship Score</h2>
-                <p id="result"></p>
-                <button href="#twitter" id="share-button">Share Your Score</button>
-                <a class="try" href="index.html">Try Again</a>
-            </div>
-        </section>
+        <h3 class="page-title">Fun Interactive Games</h3>
+        <p class="page-discription">Play a set of interactive and fun games, and share your scores on Twitter, Instagram, Facebook.</p>
+
+        <h4 class="action">Try One These Games Below 👇:</h4>
+
         <section class="second">
-            <a href="Kashmiri-Language-Score/index.html">
-                <div class="other-games">
-                    <h3>Kashmiri Language Score</h3>
+            <a href="../Spotify-Song-Finder/index.html">
+                <div class="other-games" class="animation-class">
+                    <h3>Spotify Song Finder</h3>
                     <h4>Find Your Twitter Love Score With Your Twitter Crush</h4>
                 </div>
             </a>
-            <a href="new.html">
-                <div class="other-games">
+            <a href="#">
+                <div class="other-games" class="animation-class">
                     <h3>Sher Finder</h3>
                     <h4>Find Which Sher Suits You Based on Your Twitter Profile</h4>
                 </div>
             </a>
-            <a href="Spotify-Song-Finder/index.html">
-                <div class="other-games">
-                    <h3>Song Finder</h3>
+            <a href="index.html">
+                <div class="other-games" class="animation-class">
+                    <h3>Twitter Friendship Score</h3>
                     <h4>Find Your Perfect Song Based on Your Twitter Profile</h4>
                 </div>
             </a>
-            <a href="new.html">
-                <div class="other-games">
+            <a href="#">
+                <div class="other-games" class="animation-class">
                     <h3>Twiter Hate Score</h3>
                     <h4>Find Your Twitter Hate Score With Your Twitter Enemy</h4>
                 </div>
@@ -64,6 +62,8 @@
         <section class="footer">
             <a>All Rights Reserved @TwitGames</a>
         </section>
+
         <script src="index.js"></script>
+        <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     </body>
 </html>

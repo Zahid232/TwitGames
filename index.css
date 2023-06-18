@@ -1,5 +1,3 @@
-
-
 *{
     margin: 0;
     padding: 0;
@@ -10,7 +8,13 @@
 }
 
 body{
+    background-image: url("https://images.unsplash.com/photo-1522441815192-d9f04eb0615c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1227&q=80");
+    opacity: 1;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
     position: relative;
+    opacity: 1.3;
 }
 
 header{
@@ -20,9 +24,12 @@ header{
     display: flex;
     padding: 10px 20px;
     align-items: center;
-    background-color: #dcdfe3;
+    background-color: #fff;
     width: 100%;
-
+    opacity: 1;
+    z-index: 2;
+    border-bottom: 1px solid gainsboro;
+    height: 8%;
 }
 
 header a{
@@ -40,120 +47,135 @@ header a{
 }
 
 span{
-    color: rgb(53, 187, 214);
+    color:#3498db;
+}
+
+#title{
+    color: #1DB954;
 }
 
 
-.main{
-    margin-right: 20px;
-    margin-left: 20px;
-    margin-top: 220px;
-    margin-bottom: 100px;
-}
-
-.input-page{
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(219, 216, 216);
-    padding: 40px 20px;
-    box-shadow: 5px 5px 20px rgb(161, 177, 180);
-    animation-name: moveInRight;
-    animation-duration: 2.5s;
-    border-radius: 20px;
-}
-
-.input-page h3{
-    font-size: 20px;
-}
 
 
-form{
-    display: flex;
-    flex-direction: column;
-}
 
-input{
-    margin-top: 35px;
-    padding: 8px 12px;
-    font-size: 18px;
-    border-radius: 4px;
+.menu {
+    position: relative;
+    margin-left: 220px;
+  }
+  
+.menu-button {
+    padding: 10px;
+    background-color: #fff;
     border: none;
-    font-weight: 700;
-    outline: none;
-    transition: border .95s ease-in-out;
+    cursor: pointer;
+    
 }
 
-input:hover{
-    border: 1px solid rgb(53, 187, 214);
+.menu-button i{
+    font-size: 30px;
+    color: black;
 }
 
-form button{
-    margin-top: 35px;
-    font-size: 20px;
-    padding: 8px 12px;
-    border-radius: 8px;
-    border: none;
-    background-color:rgb(53, 187, 214) ;
-    font-weight: 600;
-    letter-spacing: 1px;
-    transition: all .45s ease;
-}
 
-form button:hover{
-    background-color:rgb(25, 132, 153) ;
-}
 
-.output-page{
+.menu-options {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    list-style: none;
+    transition: opacity .5s ease;
+    animation: slide .5s;
+    background-color: black;
+    width:fit-content;
     display: none;
-    flex-direction: column;
-    background-color: rgb(219, 216, 216);
-    padding: 40px 20px;
-    box-shadow: 1px 1px 10px rgb(53, 187, 214);
 }
 
-.output-page h2{
-    text-align: center;
+
+
+.menu-options li {
+    margin-top: 20px;
+    padding: 10px;
+    color: #f0f0f0;
+    transition: all .45s ease;
+  }
+  
+.menu-options li:hover {
+    background-color: #4c4949;
+  }
+
+
+.drop-down{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    border-bottom: 1px solid whitesmoke;
+}
+
+.drop-down h4{
+    color: #f0f0f0;
     font-size: 22px;
+    margin-left: 50%;
 }
 
-.output-page p {
-    margin-top: 30px;
-    font-size: 17px;
-    font-weight: 600;
-    min-height: 100px;
-    background-color: rgb(53, 187, 214);
-    letter-spacing: 1px;
-    line-height: 25px;
-    padding: 20px;
-    border-radius: 8px;
-}
 
-.output-page button{
-    margin-top: 40px;
-    font-size: 16px;
-    padding: 8px 80px;
-    border-radius: 8px;
+.close-button{
+    background-color: black;
     border: none;
-    background-color: rgb(62, 165, 224);
-    font-weight: 600;
+    
 }
 
-.output-page a{
-    text-decoration: none;
-    font-size: 16px;
-    margin-top: 30px;
-    padding: 8px 110px;
-    border-radius: 8px;
-    border: none;
-    background-color: whitesmoke;
-    font-weight: 600;
+.close-button i{
+    color: #f0f0f0;
+    font-size: 24px;
+}
+
+
+
+.page-title{
+    margin-top: 200px;
     text-align: center;
+    font-size: 28px;
+    color:#1DB954;
+    /* text-decoration:underline; */
+    letter-spacing: 1px;
+    animation: moveInRight 2s;
+
 }
+
+.page-discription{
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    animation: moveInLeft 2s;
+    color: black;
+    margin-bottom: 120px;
+    margin-top: 10px;
+}
+
+
+.action{
+    text-align: center;
+    transition: opacity 1s ease;
+    animation: dimmer 1.5s infinite;
+}
+
+
+
+
+
+
+
 
 .second{
-    width: 100%;
-    background-color: rgb(53, 187, 214);
+    margin: 0;
+    width: 100vw;
+    /* background-color: #1DB954; */
     padding: 40px 0px;
+    margin-top: 20px;
+    border: none;
 }
 
 
@@ -165,6 +187,13 @@ form button:hover{
     border-radius: 10px;
     transition: all .45s ease;
     padding: 20px;
+    opacity: 0;
+   
+}
+
+.animation-class{
+    animation: slideUp 2s;
+    opacity: 0.7;
 }
 
 .other-games:hover{
@@ -182,6 +211,7 @@ form button:hover{
 .other-games h3{
     color: rgb(53, 187, 214);
     font-size: 22px;
+    margin-bottom: 20px;
 }
 
 
@@ -194,6 +224,8 @@ a{
     background-color: black;
     padding: 10px 20px;
     text-align: center;
+    margin: 0;
+    border: none;
 }
 
 .footer a{
@@ -201,14 +233,20 @@ a{
     color: whitesmoke;
     text-align: center;
 }
-@keyframes moveInRight {
+
+
+/* Animations */
+
+
+@keyframes moveInLeft {
     0%{
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(-100px);
     }
 
-    50%{
-        transform: translate(-20px);
+    80%{
+        opacity: 1;
+        transform: translate(10px);
     }
 
     100%{
@@ -218,31 +256,63 @@ a{
 }
 
 
-@media only screen and (min-width: 800px) {
-    
-    .sign-up{
-        margin-left: 80vw;
-    }
-    
-    
-    .input-page{
-        width: 500px;
-        margin-left: auto;
-        margin-right: auto;
+@keyframes moveInRight {
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
     }
 
-    .output-page{
-        width: 500px;
-        margin-left: auto;
-        margin-right: auto;
+    80%{
+        opacity: 1;
+        transform: translate(-10px);
     }
 
-    .second {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+    100%{
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+
+@keyframes dimmer{
+    0%{
+        opacity: 0.2;
     }
 
-    .other-games{
-        padding: 80px;
+    100%{
+        opacity: 1;
+        transform: scale(1.1);
     }
-  }
+}
+
+@keyframes slideUp{
+    0%{
+        opacity: 0.1;
+        transform: translateY(50px);
+    }
+
+    100%{
+        opacity: 0.7;
+    }
+}
+
+
+@keyframes slide{
+    0%{
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    25%{
+        opacity: 0.1;
+    }
+    50%{
+        opacity: 0.3;
+    }
+    75%{
+        opacity: 0.45;
+    }
+    100%{
+        opacity: 0.7;
+    }
+}
+

@@ -1,68 +1,79 @@
 
-var sCore=''
-var field1Value=''
-var field2Value=''
+const menuButton = document.querySelector('.menu-button');
+const menuOptions = document.querySelector('.menu-options');
+const mennu = document.querySelector(".godniuk");
+const cross = document.querySelector(".doyim");
 
 
 
-function validateForm(event){
-  
-  event.preventDefault();
-      field1Value = document.getElementById("field1").value;
-      field2Value = document.getElementById("field2").value;
-      var errorMessage = document.getElementById("errorMessage");
-      var inPut =document.getElementById("divi")
-      var ouPut =document.getElementById("outp")
 
-      if (field1Value === "" || field2Value === "" ) {
-        errorMessage.innerHTML = "Please fill in both fields.";
-        return false;
-      } else if(field1Value.toLowerCase().indexOf("@")=== -1 || field2Value.toLowerCase().indexOf("@")=== -1 ){
-        errorMessage.innerHTML="Please enter correct usernames";
-        return false;
-      }
+menuOptions.style.display = 'none';
+cross.style.display = 'none';
 
-      inPut.style.display = "none";
-      ouPut.style.display = "flex";
-      ouPut.style.animationName="moveInRight";
-      ouPut.style.animationDuration="2.5s";
+// Toggle menu options visibility and button state
+menuButton.addEventListener('click', () => {
 
-      sCore = field1Value.length * field2Value.length
-      if (sCore > 100){
-        sCore=100
-      } else if (sCore <20) {
-        sCore=30
-      } else {
-        
-      }
-      rewrite()
-    }
-
-
-function rewrite(){
-    var friendshipScore = "Yayy!! Your friendship score with " + field2Value+ " is " + sCore;
-    var shareScore = "My Twitter Friendship Score with " + field2Value + " is " + sCore + ". Find Yours at:"
-    document.getElementById("result").innerHTML = friendshipScore;
+  if (menuOptions.style.display === 'none') {
+    // Show dropdown menu and change button to cross
+    menuOptions.style.display = 'block';
+    mennu.style.display="none";
+    cross.style.display="block";
+    cross.style.animation="appear 1s";
+  } else {
+    // Hide dropdown menu and change button to menu
+    menuOptions.classList.add('close-animation');
     
-      const shareButton = document.getElementById('share-button');
-      shareButton.addEventListener('click', event =>{
-      if (navigator.share){
-        navigator.share({ 
-          title: "Twitter Friendship Score",
-          url: "https://twitgames.netlify.app/",
-          text: shareScore}).then(() => {
-          console.log("Thanks");
-          alert("Thanks")
-        })
-        .catch(console.error);
-      } else{
-        alert("Your browser doesn't support sharing.Please copy paste.")
-      }
-    })
   }
-  
-  
+});
 
 
 
 
+
+function challl(){
+    menuOptions.style.display = 'none';
+    mennu.style.display="block";
+    cross.style.display="none";
+}
+
+
+
+const elementsToAnimate = document.querySelectorAll('.other-games'); // Replace '.animate' with a CSS selector that targets the elements you want to animate
+
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.6,
+};
+
+const intersectionObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animation-class');
+      observer.unobserve(entry.target);
+    }
+  });
+}, options);
+
+elementsToAnimate.forEach(element => {
+  intersectionObserver.observe(element);
+});
+
+// Manually check visibility of the first element on page load
+const firstElement = elementsToAnimate[0];
+const firstElementVisible = isElementVisible(firstElement);
+if (firstElementVisible) {
+  firstElement.classList.add('animation-class');
+  intersectionObserver.unobserve(firstElement);
+}
+
+// Function to check if an element is visible in the viewport
+function isElementVisible(element) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
