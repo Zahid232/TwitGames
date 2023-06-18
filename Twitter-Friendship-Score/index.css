@@ -10,8 +10,14 @@
 }
 
 body{
+    background-image: url("https://images.unsplash.com/photo-1522441815192-d9f04eb0615c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1227&q=80");
+    opacity: 1;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
     position: relative;
 }
+
 
 header{
     position: fixed;
@@ -60,10 +66,28 @@ span{
     animation-name: moveInRight;
     animation-duration: 2.5s;
     border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.glass-effect {
+    background: none;
+    backdrop-filter: blur(30px);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.glass-effect form,
+.glass-effect .output-page {
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .input-page h3{
     font-size: 20px;
+    margin-bottom: 30px;
+    
 }
 
 
@@ -81,6 +105,8 @@ input{
     font-weight: 700;
     outline: none;
     transition: border .95s ease-in-out;
+    background: none;
+    border: 1px solid #1f2937;
 }
 
 input:hover{
@@ -152,7 +178,6 @@ form button:hover{
 
 .second{
     width: 100%;
-    background-color: rgb(53, 187, 214);
     padding: 40px 0px;
 }
 
@@ -165,6 +190,7 @@ form button:hover{
     border-radius: 10px;
     transition: all .45s ease;
     padding: 20px;
+    opacity: 0.7;
 }
 
 .other-games:hover{
