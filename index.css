@@ -50,12 +50,10 @@
     padding: 5px;
     color: #050303;
     transition: all .45s ease;
-    font-size: 12px;
+    font-size: 14px;
+    background-color: #f0eaea;
   }
   
-.menu-options li:hover {
-    background-color: #4c4949;
-  }
 
 
 .drop-down{
@@ -100,11 +98,5 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-
-.glass-effect2 {
-    backdrop-filter: blur(1000px);
-    padding: 10px 20px;
-    background-color: rgba(173, 223, 214, 0.6);
-}
 
 

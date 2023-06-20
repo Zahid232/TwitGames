@@ -42,12 +42,10 @@
     padding: 10px;
     color: #000000;
     transition: all .45s ease;
-    font-size: 12px;
+    font-size: 14px;
+    background-color: #f0eaea;
   }
   
-.menu-options li:hover {
-    background-color: #4c4949;
-  }
 
 
 .drop-down{
