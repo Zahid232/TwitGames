@@ -27,7 +27,7 @@ function xookk(){
         cross.style.animation="appear 0.5s";
     } else {
         // Hide dropdown menu and change button to menu
-        menuOptions.classList.add('close-animation');
+        // menuOptions.classList.add('close-animation');
         
     }
     });

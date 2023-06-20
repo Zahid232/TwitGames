@@ -13,14 +13,13 @@
 
 .menu {
     position: relative;
-    margin-left: 220px;
+    z-index: 10;
   }
   
 .menu-button {
-    padding: 10px;
-    background-color: #fff;
     border: none;
     cursor: pointer;
+    background-color: #fff;
     
 }
 
@@ -35,7 +34,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    height: 100vh;
+    height: 50vh;
     list-style: none;
     transition: opacity .5s ease;
     animation: slide .5s;
@@ -90,7 +89,7 @@
 
 
 .animation-class{
-    /* animation: slideUp s; */
+    animation: slideUp 1s;
     opacity: 0.7;
 }
 .glass-effect {
