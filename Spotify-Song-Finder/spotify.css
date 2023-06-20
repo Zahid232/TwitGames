@@ -8,11 +8,9 @@
 
 .menu {
     position: relative;
-    margin-left: 220px;
   }
   
 .menu-button {
-    padding: 10px;
     background-color: #fff;
     border: none;
     cursor: pointer;

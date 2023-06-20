@@ -6,15 +6,14 @@ export{menuOptions, menuButton, mennu, cross, xookk,challl, mombar};
 
 const menuButton = document.querySelector('.menu-button');
 const menuOptions = document.querySelector('.menu-options');
-const mennu = document.querySelector(".godniuk");
-const cross = document.querySelector(".doyim");
+const mennu = document.querySelector(".menu");
+const cross = document.querySelector(".close-button");
 
 
 
 
 function xookk(){
     menuOptions.style.display = 'none';
-    cross.style.display = 'none';
 
     // Toggle menu options visibility and button state
     menuButton.addEventListener('click', () => {
@@ -23,11 +22,8 @@ function xookk(){
         // Show dropdown menu and change button to cross
         menuOptions.style.display = 'block';
         mennu.style.display="none";
-        cross.style.display="block";
-        cross.style.animation="appear 0.5s";
+        // cross.style.animation="appear 0s";
     } else {
-        // Hide dropdown menu and change button to menu
-        // menuOptions.classList.add('close-animation');
         
     }
     });
@@ -39,7 +35,6 @@ xookk()
 function challl(){
     menuOptions.style.display = 'none';
     mennu.style.display="block";
-    cross.style.display="none";
 }
 
 
