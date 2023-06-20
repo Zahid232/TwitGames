@@ -150,7 +150,7 @@ input:hover{
     animation-duration: 2.5s;
 }
 
-#kjk, #Try{
+#kjk, #Try, #share-button{
     margin-top: 35px;
     font-size: 16px;
     padding: 8px 12px;
@@ -160,12 +160,6 @@ input:hover{
     font-weight: 600;
     letter-spacing: 1px;
     transition: all .45s ease;
-}
-#Try{
-    background-color: aqua;
-}
-#kjk:hover{
-    background-color:rgb(25, 132, 153) ;
 }
 
 

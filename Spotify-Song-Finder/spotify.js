@@ -97,6 +97,10 @@ function workAPI(searchQuery){
     const imageUrl = data.tracks.items[xokkk].album.images[0].url; // Replace with the correct path to the image URL
 
     document.getElementById("xook").style.backgroundImage = `url(${imageUrl})`;
+    var shareScore="I was dedicated this song:" + data.tracks.items[xokkk].external_urls.spotify +" Find Yours at:";
+    const shareButton= document.getElementById('share-button');
+    const sharingDiv= document.getElementById('output');
+    file1.share(shareButton, shareScore, sharingDiv);
   })
   .catch(error => {
     // Handle any errors

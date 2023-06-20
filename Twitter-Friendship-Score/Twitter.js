@@ -66,9 +66,9 @@ function rewrite(){
     var shareScore = "My Twitter Friendship Score with " + field2Value + " is " + sCore + ". Find Yours at:"
     document.getElementById("result").innerHTML = friendshipScore;
     
-      const shareButton = document.getElementById('share-button');
-      const sharingDiv=document.getElementById('outp');
-      file1.share(shareButton, shareScore,sharingDiv);
+    const shareButton = document.getElementById('share-button');
+    const sharingDiv=document.getElementById('outp');
+    file1.share(shareButton, shareScore, sharingDiv);
     //   shareButton.addEventListener('click', event =>{
     //   if (navigator.share){
     //     navigator.share({ 
