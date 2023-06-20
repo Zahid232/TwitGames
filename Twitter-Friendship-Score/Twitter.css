@@ -71,13 +71,13 @@
 
 
 .close-button{
-    background-color: black;
+    background-color: transparent;
     border: none;
     
 }
 
 .close-button i{
-    color: #f0f0f0;
+    color: black;
     font-size: 22px;
 }
 
