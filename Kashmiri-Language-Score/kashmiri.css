@@ -227,7 +227,7 @@ input[type="radio"] {
     left: 40%;
     top: 5px;
 }
-#but, #share-button{
+#but, #share-button, #but10{
     width: 160px;
     background-color: #1DB954;
     border: none;
@@ -240,7 +240,7 @@ input[type="radio"] {
     cursor: pointer;
 }
 
-#but:hover{
+#but:hover, #but10:hover{
     background-color: #179744;
     /* transform: scale(.95); */
 }

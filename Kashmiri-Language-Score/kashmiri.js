@@ -1,5 +1,5 @@
 
-import * as file1 from '/same-js.js'
+import * as file1 from '/same-js.js';
 import { challl } from '/same-js.js';
 
 file1.xookk()
@@ -7,20 +7,20 @@ file1.xookk()
 file1.mombar()
 
 
-function handleClick1() {
+function handleClick() {
     challl();
   }
     const button = document.querySelector('.close-button');
-    button.onclick = handleClick1;
-
-
-let score = 0;
+    button.onclick = handleClick;
 
 
 
 
 
 
+
+
+let score=0;
 
 
 function handleQuestion(event, questionId, answerValue) {
@@ -60,9 +60,9 @@ function handleQuestion(event, questionId, answerValue) {
     };
   }
   
-
-  function chal10(event){
-    event.preventDefault();
+  
+document.getElementById('but10').addEventListener('click', function(event) {
+  event.preventDefault();
     const answer1 = document.querySelector('input[name="q10"]:checked').value;
 
     if (answer1==="A"){
@@ -94,39 +94,51 @@ function handleQuestion(event, questionId, answerValue) {
         loadingButton.style.display = "none";
         content.classList.remove("hidden");
       }, 3000);
-      share()
-  }
+      var shareScore = "My Kashmiri Language Score is " + score + ". Find Yours at:";
+      const shareButton=document.getElementById('share-button');
+      const sharingDiv=document.getElementById('content');
+      file1.share(shareButton,shareScore, sharingDiv)
+})
+
+    
 
 
-function share(){
+
+
+
+
+
+  // function share(){
   
-  const shareButton = document.getElementById('share-button');
-
-  var shareScore = "My Kashmiri Language Score is " + score + ". Find Yours at:";
-
-  shareButton.addEventListener('click', event => {
-    shareButton.style.display = 'none'; // Hide the share button temporarily
-
-    if (navigator.share) {
-      html2canvas(content, { useCORS: true }).then(canvas => {
-        canvas.toBlob(blob => {
-          const file = new File([blob], 'code_snippet.png', { type: 'image/png' });
-          navigator.share({
-            title: "Kashur Kotah Zaanakh",
-            url: "https://twitgames.netlify.app/kashmiri-language-score/",
-            text: shareScore,
-            files: [file]
-          }).then(() => {
-            console.log("Thanks");
-          }).catch(console.error);
-        }, 'image/png');
-      }).finally(() => {
-        shareButton.style.display = ''; // Restore the display of the share button
-      });
-    } else {
-      alert("Your browser doesn't support sharing. Please copy and paste.");
-      shareButton.style.display = ''; // Restore the display of the share button
-    }
-  });
+  //   const shareButton = document.getElementById('share-button');
   
-}
+  //   var shareScore = "My Kashmiri Language Score is " + score + ". Find Yours at:";
+  
+  //   shareButton.addEventListener('click', event => {
+  //     shareButton.style.display = 'none'; // Hide the share button temporarily
+  
+  //     if (navigator.share) {
+  //       html2canvas(content, { useCORS: true }).then(canvas => {
+  //         canvas.toBlob(blob => {
+  //           const file = new File([blob], 'code_snippet.png', { type: 'image/png' });
+  //           navigator.share({
+  //             title: "Kashur Kotah Zaanakh",
+  //             url: "https://twitgames.netlify.app/kashmiri-language-score/",
+  //             text: shareScore,
+  //             files: [file]
+  //           }).then(() => {
+  //             console.log("Thanks");
+  //           }).catch(console.error);
+  //         }, 'image/png');
+  //       }).finally(() => {
+  //         shareButton.style.display = ''; // Restore the display of the share button
+  //       });
+  //     } else {
+  //       alert("Your browser doesn't support sharing. Please copy and paste.");
+  //       shareButton.style.display = ''; // Restore the display of the share button
+  //     }
+  //   });
+    
+  // }
+
+  

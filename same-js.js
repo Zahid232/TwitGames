@@ -1,6 +1,6 @@
 
 
-export{menuOptions, menuButton, mennu, cross, xookk,challl, mombar};
+export{menuOptions, menuButton, mennu, cross, xookk,challl, mombar, share};
 
 
 
@@ -29,7 +29,7 @@ function xookk(){
     });
 }
 
-xookk()
+
 
 
 function challl(){
@@ -83,4 +83,33 @@ function isElementVisible(element) {
 }
 }
 
-mombar()
+function share(shareButton, shareScore, sharingDiv){
+
+  shareButton.addEventListener('click', event => {
+    shareButton.style.display = 'none'; // Hide the share button temporarily
+
+    if (navigator.share) {
+      html2canvas(sharingDiv, { useCORS: true }).then(canvas => {
+        canvas.toBlob(blob => {
+          const file = new File([blob], 'code_snippet.png', { type: 'image/png' });
+          navigator.share({
+            title: "Kashur Kotah Zaanakh",
+            url: "https://twitgames.netlify.app/kashmiri-language-score/",
+            text: shareScore,
+            files: [file]
+          }).then(() => {
+            console.log("Thanks");
+          }).catch(console.error);
+        }, 'image/png');
+      }).finally(() => {
+        shareButton.style.display = ''; // Restore the display of the share button
+      });
+    } else {
+      alert("Your browser doesn't support sharing. Please copy and paste.");
+      shareButton.style.display = ''; // Restore the display of the share button
+    }
+  });
+  
+}
+
+

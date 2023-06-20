@@ -14,7 +14,7 @@ function handleClick() {
     challl();
   }
   
-  // Attach the handleClick function to the button's onclick event
+
   const button = document.querySelector('.close-button');
   button.onclick = handleClick;
 
@@ -27,9 +27,8 @@ var field2Value=''
 
 
 
-function validateForm(event){
-  
-  event.preventDefault();
+document.getElementById('lyath').addEventListener('click', function(event){
+      event.preventDefault();
       field1Value = document.getElementById("field1").value;
       field2Value = document.getElementById("field2").value;
       var errorMessage = document.getElementById("errorMessage");
@@ -58,7 +57,8 @@ function validateForm(event){
         
       }
       rewrite()
-    }
+}
+);
 
 
 function rewrite(){
@@ -67,20 +67,22 @@ function rewrite(){
     document.getElementById("result").innerHTML = friendshipScore;
     
       const shareButton = document.getElementById('share-button');
-      shareButton.addEventListener('click', event =>{
-      if (navigator.share){
-        navigator.share({ 
-          title: "Twitter Friendship Score",
-          url: "https://twitgames.netlify.app/",
-          text: shareScore}).then(() => {
-          console.log("Thanks");
-          alert("Thanks")
-        })
-        .catch(console.error);
-      } else{
-        alert("Your browser doesn't support sharing.Please copy paste.")
-      }
-    })
+      const sharingDiv=document.getElementById('outp');
+      file1.share(shareButton, shareScore,sharingDiv);
+    //   shareButton.addEventListener('click', event =>{
+    //   if (navigator.share){
+    //     navigator.share({ 
+    //       title: "Twitter Friendship Score",
+    //       url: "https://twitgames.netlify.app/",
+    //       text: shareScore}).then(() => {
+    //       console.log("Thanks");
+    //       alert("Thanks")
+    //     })
+    //     .catch(console.error);
+    //   } else{
+    //     alert("Your browser doesn't support sharing.Please copy paste.")
+    //   }
+    // })
   }
   
   
