@@ -1,22 +1,39 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="Twitter.css">
         <title>Twitter Friendship Score</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700&family=Palanquin:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/64f8a0bc37.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <header>
             <a href="../index.html"><span>Twit</span>Games</a>
-            <a href="../index.html" class="sign-up">Sign Up</a>
+            <div class="menu">
+                <button class="menu-button">
+                    <i class="fa-solid fa-bars godniuk"></i>
+                </button>
+                
+            </div>
+            <ul class="menu-options glass-effect">
+                <div class="drop-down">
+                    <button class="close-button" onclick="challl()"><i class="fa-solid fa-xmark doyim"></i></button>
+                    <h4>Menu</h4>
+                </div>
+                <li>Kashmiri Language Score</li>
+                <li>Twitter Language Score</li>
+                <li>Spotify Song Finder</li>
+            </ul>
         </header>
+        <h3 class="page-title">Twitter Friendship Score</h3>
+        <p class="page-discription">Find how friendly are you with a user, and share your scores on Twitter, Instagram, Facebook.</p>
         <section class="main">
             <div id="divi" class="input-page glass-effect"> 
                 <h3>Find Your Twitter Friendship Score</h3>
-                <form id="myForm" onsubmit="return validateForm(event)" class="glass-effect">
+                <form id="myForm" onsubmit="return validateForm(event)">
                     <label for="field1"></label>
                     <input type="text" id="field1" placeholder="Your Username" required>
                 
@@ -35,6 +52,7 @@
                 <a class="try" href="index.html">Try Again</a>
             </div>
         </section>
+        <h4 class="action">Also Try One These Games Below 👇:</h4>
         <section class="second" class="glass-effect">
             <a href="Kashmiri-Language-Score/index.html">
                 <div class="other-games">
@@ -64,6 +82,6 @@
         <section class="footer">
             <a>All Rights Reserved: TwitGames</a>
         </section>
-        <script src="index.js"></script>
+        <script src="Twitter.js" type="module"></script>
     </body>
 </html>

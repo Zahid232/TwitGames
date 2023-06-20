@@ -1,15 +1,36 @@
 
 
+import * as file1 from '/same-js.js'
+import { challl } from '/same-js.js';
+
+file1.xookk()
+
+file1.mombar()
+
+
+function handleClick1() {
+    challl();
+  }
+    const button = document.querySelector('.close-button');
+    button.onclick = handleClick1;
+
+
+
+
 let searchQuery = ""
 const clientId = '51d64c8655ac46de89787c7d9419e642';
 const clientSecret = '012746bf0b5e4c61b28bb7dee1cbe746';
 let toKen = ""
 
 
+document.getElementById('button-sub').addEventListener('click', () =>{
+  xookmyoan()
+})
+
 function xookmyoan(){
 
-  field1Value = document.getElementById("Username").value;
-  field2Value = document.getElementById("prompt").value;
+  let field1Value = document.getElementById("Username").value;
+  let field2Value = document.getElementById("prompt").value;
   searchQuery = field2Value;
   
   var errorMessage = document.getElementById("errorMessage");
@@ -22,7 +43,7 @@ function xookmyoan(){
   document.getElementById("input").style.display = "none";
   document.getElementById("output").style.display = "flex";
   console.log(field2Value)
-  workAPI()
+  workAPI(field2Value)
 }
 
 
@@ -55,8 +76,7 @@ const getToken = async () => {
 
 
 
-function workAPI(){
-  const searchQuery =  field2Value 
+function workAPI(searchQuery){
   getToken()
   .then((result) => {
     const token = result;

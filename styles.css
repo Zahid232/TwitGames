@@ -1,0 +1,239 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #1f2937;
+    font-family: 'Palanquin', sans-serif;
+
+}
+
+body{
+    background-image: url("https://images.unsplash.com/photo-1522441815192-d9f04eb0615c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1227&q=80");
+    opacity: 1;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    padding: 10px 20px;
+    align-items: center;
+    background-color: #fff;
+    width: 100%;
+    opacity: 1;
+    z-index: 2;
+    border-bottom: 1px solid gainsboro;
+    height: 60px;
+}
+
+header a{
+    text-decoration: none;
+    color: #4a4c4f;
+    font-size: 20px;
+    font-weight: 700;
+
+}
+
+span{
+    color:#3498db;
+}
+
+#title{
+    color: #1DB954;
+}
+
+
+
+
+
+
+
+.page-title{
+    margin-top: 200px;
+    text-align: center;
+    font-size: 28px;
+    color:#1DB954; 
+    letter-spacing: 1px;
+    animation: moveInRight 2s;
+
+} 
+
+.page-discription{
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    animation: moveInLeft 2s;
+    color: black;
+    margin-bottom: 100px;
+    margin-top: 10px;
+}
+
+
+.action{
+    text-align: center;
+    transition: opacity 1s ease;
+    animation: dimmer 1.5s infinite;
+} 
+
+
+
+.second{
+    margin: 0;
+    width: 100vw;
+    padding: 40px 0px;
+    border: none;
+}
+
+
+.other-games{
+    background-color:  black;
+    margin: 30px 20px;
+    box-shadow: 1px 1px 10px rgb(98, 158, 188);
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all .45s ease;
+    padding: 20px;
+    opacity: 0;
+   
+}
+
+.animation-class{
+    animation: slideUp 2s;
+    opacity: 0.7;
+}
+
+.other-games:hover{
+    background-color: #4a4c4f;
+}
+
+.other-games h3, .other-games h4{
+    color: whitesmoke;
+}
+
+.other-games h4{
+    font-size: 14px;
+}
+
+.other-games h3{
+    color: rgb(53, 187, 214);
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+
+.footer{
+    background-color: black;
+    padding: 10px 20px;
+    text-align: center;
+    margin: 0;
+    border: none;
+}
+
+.footer a{
+    text-decoration: none;
+    color: whitesmoke;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes moveInLeft {
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80%{
+        opacity: 1;
+        transform: translate(10px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+
+@keyframes moveInRight {
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80%{
+        opacity: 1;
+        transform: translate(-10px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+
+@keyframes dimmer{
+    0%{
+        opacity: 0.2;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp{
+    0%{
+        opacity: 0.1;
+        transform: translateY(50px);
+    }
+
+    100%{
+        opacity: 0.7;
+    }
+}
+
+
+@keyframes slide{
+    0%{
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    25%{
+        opacity: 0.1;
+    }
+    50%{
+        opacity: 0.3;
+    }
+    75%{
+        opacity: 0.45;
+    }
+    100%{
+        opacity: 0.7;
+    }
+}

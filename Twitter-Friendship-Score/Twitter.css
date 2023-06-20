@@ -1,59 +1,96 @@
 
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: #1f2937;
-    font-family: 'Palanquin', sans-serif;
 
-}
+@import url('../styles.css');
 
-body{
-    background-image: url("https://images.unsplash.com/photo-1522441815192-d9f04eb0615c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1227&q=80");
-    opacity: 1;
-    background-size:cover;
-    background-repeat: no-repeat;
-    background-position: center;
+.menu {
     position: relative;
+    margin-left: 220px;
+  }
+  
+.menu-button {
+    padding: 10px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    
+}
+
+.menu-button i{
+    font-size: 30px;
+    color: black;
 }
 
 
-header{
-    position: fixed;
+
+.menu-options {
+    position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
+    height: 50vh;
+    list-style: none;
+    transition: opacity .5s ease;
+    animation: slide .5s;
+    background-color: black;
+    width:fit-content;
+    display: none;
+}
+
+
+
+.menu-options li {
+    margin-top: 20px;
+    padding: 10px;
+    color: #070707;
+    transition: all .45s ease;
+    font-size: 12px;
+  }
+  
+.menu-options li:hover {
+    background-color: #4c4949;
+  }
+
+
+.drop-down{
     display: flex;
-    padding: 10px 20px;
+    flex-direction: row;
+    justify-content: left;
     align-items: center;
-    background-color: #dcdfe3;
-    width: 100%;
-
+    border-bottom: 1px solid whitesmoke;
 }
 
-header a{
-    text-decoration: none;
-    color: #4a4c4f;
+.drop-down h4{
+    color: #100e0e;
     font-size: 20px;
-    font-weight: 700;
-
+    margin-left: 40%;
 }
 
-.sign-up{
-    font-size: 16px;
-    font-weight: 500;
-    margin-left: 180px;
+
+.close-button{
+    background-color: black;
+    border: none;
+    
 }
 
-span{
-    color: rgb(53, 187, 214);
+.close-button i{
+    color: #f0f0f0;
+    font-size: 22px;
 }
+
+
+
+
+
+.animation-class{
+    animation: slideUp 2s;
+    opacity: 0.7;
+}
+
 
 
 .main{
     margin-right: 20px;
     margin-left: 20px;
-    margin-top: 220px;
     margin-bottom: 100px;
 }
 
@@ -69,20 +106,7 @@ span{
     backdrop-filter: blur(10px);
 }
 
-.glass-effect {
-    background: none;
-    backdrop-filter: blur(30px);
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
 
-.glass-effect form,
-.glass-effect .output-page {
-    background-color: transparent;
-    padding: 20px;
-    border-radius: 10px;
-}
 
 .input-page h3{
     font-size: 20px;
@@ -105,7 +129,7 @@ input{
     font-weight: 700;
     outline: none;
     transition: border .95s ease-in-out;
-    background: none;
+    background-color: rgba(55, 135, 143, 0.2);
     border: 1px solid #1f2937;
 }
 
@@ -132,7 +156,7 @@ form button:hover{
 .output-page{
     display: none;
     flex-direction: column;
-    background-color: rgb(219, 216, 216);
+    /* background-color: rgb(219, 216, 216); */
     padding: 40px 20px;
     box-shadow: 1px 1px 10px rgb(53, 187, 214);
 }
@@ -147,7 +171,7 @@ form button:hover{
     font-size: 17px;
     font-weight: 600;
     min-height: 100px;
-    background-color: rgb(53, 187, 214);
+    /* background-color: rgb(53, 187, 214); */
     letter-spacing: 1px;
     line-height: 25px;
     padding: 20px;
@@ -161,6 +185,7 @@ form button:hover{
     border-radius: 8px;
     border: none;
     background-color: rgb(62, 165, 224);
+    opacity: 1;
     font-weight: 600;
 }
 
@@ -171,77 +196,16 @@ form button:hover{
     padding: 8px 110px;
     border-radius: 8px;
     border: none;
-    background-color: whitesmoke;
     font-weight: 600;
     text-align: center;
 }
 
-.second{
-    width: 100%;
-    padding: 40px 0px;
+.try{
+    background-color: #1DB954;
+    opacity: .8;
 }
 
 
-.other-games{
-    background-color:  black;
-    margin: 30px 20px;
-    box-shadow: 1px 1px 10px rgb(98, 158, 188);
-    cursor: pointer;
-    border-radius: 10px;
-    transition: all .45s ease;
-    padding: 20px;
-    opacity: 0.7;
-}
-
-.other-games:hover{
-    background-color: #4a4c4f;
-}
-
-.other-games h3, .other-games h4{
-    color: whitesmoke;
-}
-
-.other-games h4{
-    font-size: 14px;
-}
-
-.other-games h3{
-    color: rgb(53, 187, 214);
-    font-size: 22px;
-}
-
-
-a{
-    text-decoration: none;
-}
-
-
-.footer{
-    background-color: black;
-    padding: 10px 20px;
-    text-align: center;
-}
-
-.footer a{
-    text-decoration: none;
-    color: whitesmoke;
-    text-align: center;
-}
-@keyframes moveInRight {
-    0%{
-        opacity: 0;
-        transform: translateX(100px);
-    }
-
-    50%{
-        transform: translate(-20px);
-    }
-
-    100%{
-        opacity: 1;
-        transform: translate(0px);
-    }
-}
 
 
 @media only screen and (min-width: 800px) {
@@ -272,3 +236,18 @@ a{
         padding: 80px;
     }
   }
+
+.glass-effect {
+    background: none;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.glass-effect form,
+.glass-effect .output-page {
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 10px;
+}

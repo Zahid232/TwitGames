@@ -3,22 +3,42 @@
     <head>
         <title>Spotify Song Finder</title>
         <link rel="stylesheet" href="spotify.css">
+        <link rel="stylesheet" href="../index.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700&family=Palanquin:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/64f8a0bc37.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <header>
-            <a href="#"><span>Twit</span>Games</a>
-            <a href="#" class="sign-up">Sign Up</a>
+            <a href="#"><span style="color: #1DB954;">Twit</span>Games</a>
+            <div class="menu">
+                <button class="menu-button">
+                    <i class="fa-solid fa-bars godniuk"></i>
+                </button>
+                
+            </div>
+            <ul class="menu-options glass-effect" style="height: 50vh;">
+                <div class="drop-down">
+                    <button class="close-button" onclick="chall()"><i class="fa-solid fa-xmark doyim"></i></button>
+                    <h4>Menu</h4>
+                </div>
+                <li>Kashmiri Language Score</li>
+                <li>Twitter Language Score</li>
+                <li>Spotify Song Finder</li>
+            </ul>
         </header>
+        <h3 class="page-title">Fun Interactive Games</h3>
+        <p class="page-discription">Play a set of interactive and fun games, and share your scores on Twitter, Instagram, Facebook.</p>
+
+        
         <section class="main" id="section">
-            <div class="input" id="input">
+            <div class="input glass-effect" id="input">
                 <input type="text" id="Username" placeholder="Enter Your Name" required>
                 <input type="text" id="prompt" placeholder="Define Yourself In One Word" required>
                 <div class="error-message" id="errorMessage"></div>
-                <button type="submit" id="button-sub" onclick="xookmyoan()">Find Your Song</button>
+                <button type="submit" id="button-sub">Find Your Song</button>
             </div>
             <div class="output" id="output">
                 <div id="xook"></div>
@@ -28,6 +48,7 @@
             
                 
         </section>
+        <h4 class="action">Try One These Games Below 👇:</h4>
         <section class="second">
             <a href="../Kashmiri-Language-Score/index.html">
                 <div class="other-games">
@@ -58,6 +79,6 @@
             <a>All Rights Reserved @TwitGames</a>
         </section>
 
-        <script src="spotify.js"></script>
+        <script src="spotify.js" type="module"></script>
     </body>
 </html>

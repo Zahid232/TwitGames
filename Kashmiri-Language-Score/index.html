@@ -11,19 +11,24 @@
     </head>
     <body>
         <header>
-            <a href="#"><span id="title">Twit</span>Games</a>
+            <a href="../index.html"><span id="title">Twit</span>Games</a>
             
             <div class="menu">
                 <button class="menu-button">
                     <i class="fa-solid fa-bars godniuk"></i>
-                    <i class="fa-solid fa-xmark doyim"></i>
                 </button>
-                <ul class="menu-options">
-                    <li>Option 1</li>
-                    <li>Option 2</li>
-                    <li>Option 3</li>
-                </ul>
+                
             </div>
+            <ul class="menu-options glass-effect">
+                <div class="drop-down">
+                    <button class="close-button" onclick="challl()"><i class="fa-solid fa-xmark doyim"></i></button>
+                    <h4>Menu</h4>
+                </div>
+                <li>Kashmiri Language Score</li>
+                <li>Twitter Language Score</li>
+                <li>Spotify Song Finder</li>
+            </ul>
+
            
         </header>
         
@@ -163,7 +168,7 @@
             <h4 id="result-advice"></h4>
             <button id="share-button">Share</button>
         </section>  
-
+        <h4 class="action">Also Try One These Games Below 👇:</h4>
         <section class="second">
             <a href="../Spotify-Song-Finder/index.html">
                 <div class="other-games" class="animation-class">
@@ -193,8 +198,7 @@
         <section class="footer">
             <a>All Rights Reserved @TwitGames</a>
         </section>
-
-        <script src="kashmiri.js"></script>
+        <script src="kashmiri.js" type="module"></script>
         <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 
     </body>
