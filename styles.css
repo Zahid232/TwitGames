@@ -58,7 +58,7 @@ span{
 
 
 .page-title{
-    margin-top: 200px;
+    margin-top: 150px;
     text-align: center;
     font-size: 28px;
     color:#1DB954; 
@@ -73,7 +73,7 @@ span{
     font-weight: 500;
     animation: moveInLeft 2s;
     color: black;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
     margin-top: 10px;
 }
 
