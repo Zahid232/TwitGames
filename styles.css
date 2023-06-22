@@ -26,10 +26,14 @@ header{
     align-items: center;
     width: 100%;
     z-index: 2;
-    border-bottom: 1px solid rgb(173, 168, 168);
+    border-bottom: 1px solid rgb(225, 217, 217, 0.5);
     height: 60px;
-    display: grid;
-    grid-template-columns: 1fr 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(225, 247, 251, 0.5);
+    
 }
 
 header a{
