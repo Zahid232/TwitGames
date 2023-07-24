@@ -80,7 +80,7 @@ document.getElementById('but10').addEventListener('click', function(event) {
     } else if (score>50 && score<75){
         advice.innerHTML="Your Kashmiri is decent enough but you should still try learning more about it."
     }else{
-        advice.innerHTML="Your Kashmiri is very good. You should try to promote the language among your people."
+        advice.innerHTML="Your Kashmiri is very good. You should try to promote the language among your friends and family."
     }
 
 
