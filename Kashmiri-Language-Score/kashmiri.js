@@ -70,6 +70,7 @@ document.getElementById('but10').addEventListener('click', function(event) {
     }else{
         score-=3;
     }
+    console.log(score)
     document.getElementById("questions").style.display='none';
     document.getElementById("load").style.display='block';
     document.getElementById("resultvalue").innerHTML+=score;
