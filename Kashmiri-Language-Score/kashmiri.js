@@ -31,6 +31,7 @@ function handleQuestion(event, questionId, answerValue) {
     } else {
       score -= 3;
     }
+    console.log(score)
     document.getElementById(questionId).style.display = 'none';
 
     const nextQuestionId = parseInt(questionId.slice(1)) + 1;
@@ -65,12 +66,13 @@ document.getElementById('but10').addEventListener('click', function(event) {
   event.preventDefault();
     const answer1 = document.querySelector('input[name="q10"]:checked').value;
 
-    if (answer1==="A"){
+    if (answer1==="B"){
             score+=10;
+
     }else{
         score-=3;
     }
-    console.log(score)
+    
     document.getElementById("questions").style.display='none';
     document.getElementById("load").style.display='block';
     document.getElementById("resultvalue").innerHTML+=score;
